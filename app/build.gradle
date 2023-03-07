@@ -1,0 +1,224 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+apply plugin: 'com.google.firebase.firebase-perf'
+
+apply plugin: 'com.google.firebase.crashlytics'
+
+apply plugin: "org.sonarqube"
+android {
+
+    signingConfigs {
+        debug {
+            keyAlias 'key'
+            keyPassword '123456'
+            storeFile file('../app/ea1h_key_debug')
+            storePassword '123456'
+
+        }
+        release {
+            keyAlias 'key'
+            keyPassword '123456'
+            storeFile file('../app/ea1h_key_release')
+            storePassword '123456'
+        }
+    }
+
+    compileSdkVersion 31
+
+    defaultConfig {
+        applicationId "ymsli.com.ea1h"
+        minSdkVersion 26
+        targetSdkVersion 31
+        versionCode 116
+        versionName "2.9"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
+    }
+    buildTypes {
+        debug {
+            //buildConfigField("String", "DAP_IOT_URL", "\"https://yccptest02.ymcapps.net/\"")//dev DAPIoT url
+            //buildConfigField("String", "BASE_URL", "\"https://8tzs99obif.execute-api.ap-south-1.amazonaws.com/UAT/\"")
+            //buildConfigField("String", "BASE_URL", "\"http://iymconnected-api-dev.ap-south-1.elasticbeanstalk.com/\"")
+            //buildConfigField("String", "BASE_URL", "\"http://iymconnected-api-uat.ap-south-1.elasticbeanstalk.com/\"")
+            //buildConfigField("String", "DAP_IOT_URL", "\"https://www-stg.be0015520f-jp.com/\"")//staging DAPIoT URL
+            //buildConfigField("String", "BASE_URL", "\"http://iymconnected-api-prod.ap-south-1.elasticbeanstalk.com/\"")
+            buildConfigField("String", "DAP_IOT_URL", "\"https://www.be0015520f-eu.com/\"")//prod DAPIoT URL
+            buildConfigField("String", "BASE_URL", "\"https://jf40138cu3.execute-api.ap-south-1.amazonaws.com/prod\"")
+            buildConfigField("String", "OS", "\"android\"")
+            /*minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'*/
+
+
+        }
+        release {
+            //buildConfigField("String", "DAP_IOT_URL", "\"https://yccptest02.ymcapps.net/\"")//dev DAPIoT url
+            //buildConfigField("String", "BASE_URL", "\"http://iymconnected-api-dev.ap-south-1.elasticbeanstalk.com/\"")
+            //buildConfigField("String", "BASE_URL", "\"https://8tzs99obif.execute-api.ap-south-1.amazonaws.com/UAT/\"")
+            //buildConfigField("String", "DAP_IOT_URL", "\"https://www-stg.be0015520f-jp.com/\"")//staging DAPIoT URL
+            //buildConfigField("String", "BASE_URL", "\"http://iymconnected-api-dev.ap-south-1.elasticbeanstalk.com/\"")
+            //buildConfigField("String", "DAP_IOT_URL", "\"https://yccptest02.ymcapps.net/\"")//dev DAPIoT url
+            //buildConfigField("String", "DAP_IOT_URL", "\"https://www-stg.be0015520f-jp.com/\"")//staging DAPIoT URL
+            //Prod Config
+            buildConfigField("String", "DAP_IOT_URL", "\"https://www.be0015520f-eu.com/\"")//prod DAPIoT URL
+            buildConfigField("String", "BASE_URL", "\"https://jf40138cu3.execute-api.ap-south-1.amazonaws.com/prod\"")
+            buildConfigField("String", "OS", "\"android\"")
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+           
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation files('libs/gigya-android-sdk-4.0.10.aar')
+    implementation files('libs/gigya-sdk-3.3.11.jar')
+    implementation "com.google.code.gson:gson:$gigya_gson"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.3'
+    implementation 'androidx.navigation:navigation-ui:2.3.3'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+
+    // Local Unit tests
+    testImplementation "junit:junit:$junit_version"
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    kaptTest "com.google.dagger:dagger-compiler:$dagger_version"
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
+    testImplementation "org.hamcrest:hamcrest-library:$hamcrest_version"
+    testImplementation "org.hamcrest:hamcrest:$hamcrest_version"
+
+    // UI Testing
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.3.0-alpha03'
+    androidTestImplementation "androidx.test:runner:$test_runner_version"
+    androidTestImplementation "androidx.test.ext:junit:$test_ext_runner_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:3.2.0"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espresso_version"
+    androidTestImplementation "org.mockito:mockito-core:$mockito_version"
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+    kaptAndroidTest "com.google.dagger:dagger-compiler:$dagger_version"
+
+    // Dagger
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    // Networking
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0"
+
+    // Reactive
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroid_version"
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    // Lifecycle Annotations
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.2.0"
+
+
+    //Google play services
+    implementation "com.google.android.gms:play-services-location:$location_services_version"
+
+
+    //Kotlin coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines"
+
+    //firebase dependencies
+    implementation "com.google.firebase:firebase-analytics:$firebase_analytics"
+    //implementation platform('com.google.firebase:firebase-bom:27.1.0')
+    //implementation 'com.google.firebase:firebase-analytics-ktx'
+    //implementation "com.crashlytics.sdk.android:crashlytics:$firebase_crashalytics"
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.2'
+
+    // Database
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+
+    //Google material library
+    implementation "com.google.android.material:material:$material_lib"
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.6.2'
+    implementation "androidx.work:work-runtime:2.7.1"
+
+    /** Show case view, app tutorial dependencies */
+    //implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.0'
+
+    //zxing dependency for QR code scanning
+    implementation 'com.google.zxing:core:3.4.0'
+    implementation "com.journeyapps:zxing-android-embedded:3.6.0"
+
+    //moshi dependency
+    implementation "com.squareup.moshi:moshi-kotlin:1.8.0"
+    implementation "com.squareup.moshi:moshi-adapters:1.8.0"
+
+    //android security
+    implementation "androidx.security:security-crypto:1.0.0-alpha02"
+
+    /** Glide is used to loads gifs into view pager */
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+
+    /** View model */
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-alpha05"
+
+    implementation 'com.github.ghost1372:Mzip-Android:0.4.0'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+
+    implementation 'androidx.preference:preference:1.1.1'
+
+    //dexter permissions
+    implementation "com.karumi:dexter:6.2.2"
+    implementation 'com.github.yalantis:ucrop:2.2.5'
+
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+
+    //firebase performance sdk
+    implementation 'com.google.firebase:firebase-perf:18.0.1'
+
+    implementation 'com.appyvet:materialrangebar:1.4.8'
+
+    //Picasso for image rendering
+    implementation group: 'com.squareup.picasso', name: 'picasso', version: '2.71828'
+
+    /*implementation 'androidx.work:work-runtime-ktx:2.7.1'*/
+
+}
+
+apply plugin: 'com.google.gms.google-services'
+
+

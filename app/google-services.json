@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "233367931551",
+    "firebase_url": "https://iym-connected-ea1h-android.firebaseio.com",
+    "project_id": "iym-connected-ea1h-android",
+    "storage_bucket": "iym-connected-ea1h-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233367931551:android:b578338af85c18112630aa",
+        "android_client_info": {
+          "package_name": "ymsli.com.ea1h"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233367931551-qn694gc7vpf8q15fc5gv2hh4r45o6ieg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm3q_TIaXbEUrkhJyLmRPzhenyHI6JY3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233367931551-qn694gc7vpf8q15fc5gv2hh4r45o6ieg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

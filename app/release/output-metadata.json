@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "ymsli.com.ea1h",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 115,
+      "versionName": "2.9",
+      "outputFile": "app-release.apk"
+    }
+  ],
+  "elementType": "File"
+}
