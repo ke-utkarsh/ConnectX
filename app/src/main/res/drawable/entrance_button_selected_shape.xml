@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Project Name : EA1H
+  ~  * @company YMSLI
+  ~  * @author VE00YM129
+  ~  * @date   31/1/20 11:00 AM
+  ~  * Copyright (c) 2020, Yamaha Motor Solutions (INDIA) Pvt Ltd.
+  ~  */
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/buttonFillGreen"/>
+    <padding
+        android:start="16dp"
+        android:end="16dp"
+        android:top="4dp"
+        android:bottom="4dp"/>
+    <corners android:radius="8dp"/>
+</shape>

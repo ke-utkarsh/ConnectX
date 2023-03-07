@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  
+  * Project Name : EA1H
+  * @company YMSLI
+  * @author  (VE00YM023)
+  * @date    4/2/20 10:51 AM
+  * Copyright (c) 2020, Yamaha Motor Solutions (INDIA) Pvt Ltd.
+  *
+  * Description
+  * __________________________________________________________________________________
+  * This file provides different background drawables for sign_in and sign_up buttons
+  * based on the state of button.
+  *
+  * Revision History
+  * __________________________________________________________________________________
+  * Modified By          Modified On         Description
+  * __________________________________________________________________________________
+-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_checked="true"
+        android:drawable="@drawable/entrance_button_selected_shape"/>
+    <item
+        android:state_checked="false"
+        android:drawable="@drawable/entrance_button_shape"/>
+</selector>
