@@ -1,0 +1,53 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ymsli.com.demoea1hlib"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+8-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+11-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:5:5-79
+11-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:5:22-76
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:6:5-81
+12-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:6:22-78
+13    <uses-permission android:name="android.permission.BLUETOOTH" />
+13-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:7:5-68
+13-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:7:22-65
+14    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+14-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:8:5-74
+14-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:8:22-71
+15
+16    <application>
+16-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:10:5-25:19
+17        <receiver android:name="ymsli.com.pmp3lib.callManagement.PhoneStateReceiver" >
+17-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:11:9-15:20
+17-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:11:19-85
+18            <intent-filter>
+18-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:12:13-14:29
+19                <action android:name="android.intent.action.PHONE_STATE" />
+19-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:13:17-76
+19-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:13:25-73
+20            </intent-filter>
+21        </receiver>
+22        <receiver
+22-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:17:9-23:20
+23            android:name="ymsli.com.pmp3lib.BTCallbacks"
+23-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:18:13-57
+24            android:exported="false" >
+24-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:19:13-37
+25            <intent-filter>
+25-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:20:13-22:29
+26                <action android:name="ymsli.com.ea1h.CONNECTION" />
+26-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:21:17-67
+26-->/Users/sushantsomani/Documents/Android_Projects/EA1H_Connected_Bike/pmp3lib/src/main/AndroidManifest.xml:21:25-65
+27            </intent-filter>
+28        </receiver>
+29    </application>
+30
+31</manifest>

@@ -1,0 +1,63 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/4/%%%/4/'%**4YYY///"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+
+BS_:
+
+BU_:
+
+
+BO_ 288 Engine1: 8 Vector__XXX
+ SG_ RPM : 15|16@0+ (1,0) [0|65534] "rpm" Vector__XXX
+ SG_ ANG_FAR : 31|8@0+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 304 Engine3: 8 Vector__XXX
+ SG_ TINJ : 15|16@0+ (1,0) [0|100] "us" Vector__XXX
+
+BO_ 544 Dashboard_1: 8 Vector__XXX
+ SG_ speedometer : 7|8@0+ (1,0) [0|0] "Km/h" Vector__XXX
+ SG_ speed_units : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ temp_units : 9|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 384 Engine2: 8 Vector__XXX
+ SG_ TH2OC : 23|8@0+ (1,-40) [0|214] "" Vector__XXX
+
+BO_ 1417 VMP4: 8 Vector__XXX
+ SG_ total_ODOMETER_byte_1 : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ total_ODOMETER_byte_2 : 15|8@0+ (1,0) [0|0] "km" Vector__XXX
+ SG_ total_ODOMETER_byte_3 : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ clock_minutes : 45|6@0+ (1,0) [0|0] "min" Vector__XXX
+ SG_ clock_hours : 52|5@0+ (1,0) [0|0] "h" Vector__XXX
+ SG_ fuel_bars : 55|3@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1424 VMP5: 8 Vector__XXX
+ SG_ Engine_Light_Alarm : 22|1@0+ (1,0) [0|1] "active" Vector__XXX
+ SG_ Oil_pressure_alarm : 23|1@0+ (1,0) [0|0] "active" Vector__XXX
+ SG_ external_temperature : 47|8@0+ (1,0) [0|0] "C/F" Vector__XXX
+ SG_ battery_meter : 55|8@0+ (0.1,0) [0|0] "V" Vector__XXX
+
+BO_ 512 VMP6: 8 Vector__XXX
+ SG_ idmodelv : 23|8@0+ (1,0) [0|0] "active" Vector__XXX
+
+

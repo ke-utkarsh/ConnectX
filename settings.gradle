@@ -1,0 +1,3 @@
+include ':pmp3lib'
+include ':app'
+rootProject.name='EA1H'
