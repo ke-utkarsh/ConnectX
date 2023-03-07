@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  * Project Name : EA1H
+  * @company YMSLI
+  * @author  (VE00YM023)
+  * @date    25/02/2020 10:00 AM
+  * Copyright (c) 2020, Yamaha Motor Solutions (INDIA) Pvt Ltd.
+  *
+  * Description
+  * __________________________________________________________________________________
+  * This layer list provides a circle view to represent the default tab view in
+  * image slider. In the image slider, at any given time only one image can be selected,
+  * tabs for all the other images are represented using this layer list.
+  * __________________________________________________________________________________
+  *
+  * Revision History
+  * __________________________________________________________________________________
+  * Modified By          Modified On         Description
+  * __________________________________________________________________________________
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thickness="2dp"
+            android:useLevel="false">
+            <solid android:color="@color/facebookBlue"/>
+        </shape>
+    </item>
+</layer-list>

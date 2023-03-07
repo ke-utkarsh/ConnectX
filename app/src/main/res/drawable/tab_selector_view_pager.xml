@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <!--
+  * Project Name : EA1H
+  * @company YMSLI
+  * @author  (VE00YM023)
+  * @date    25/02/2020 10:00 AM
+  * Copyright (c) 2020, Yamaha Motor Solutions (INDIA) Pvt Ltd.
+  *
+  * Description
+  * __________________________________________________________________________________
+  * This selector is used by the TabView in the image slider view pager.
+  * it defines two items, one for selected image and another for the default tabs.
+  * __________________________________________________________________________________
+  *
+  * Revision History
+  * __________________________________________________________________________________
+  * Modified By          Modified On         Description
+  * __________________________________________________________________________________
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/indicator_view_pager_selected"
+        android:state_selected="true"/>
+
+    <item android:drawable="@drawable/indicator_view_pager_default"/>
+</selector>

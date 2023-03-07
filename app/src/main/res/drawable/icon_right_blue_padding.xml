@@ -1,0 +1,4 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="8dp" android:left="0dp" android:right="0dp" android:bottom="0dp"
+        android:drawable="@drawable/icon_right_blue"/>
+</layer-list>
