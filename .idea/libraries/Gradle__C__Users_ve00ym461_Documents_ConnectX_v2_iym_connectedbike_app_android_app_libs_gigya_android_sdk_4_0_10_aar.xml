@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: C./Users/ve00ym461/Documents/ConnectX/v2/iym-connectedbike-app_android/app/libs/gigya-android-sdk-4.0.10.aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5de131dc46d12493de7e59c95976247d/transformed/jetified-gigya-android-sdk-4.0.10/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5de131dc46d12493de7e59c95976247d/transformed/jetified-gigya-android-sdk-4.0.10/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5de131dc46d12493de7e59c95976247d/transformed/jetified-gigya-android-sdk-4.0.10/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5de131dc46d12493de7e59c95976247d/transformed/jetified-gigya-android-sdk-4.0.10/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
