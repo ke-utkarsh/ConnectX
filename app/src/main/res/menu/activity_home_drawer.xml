@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_item_home"
+            android:checkable="true"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_driving_history"
+            android:icon="@drawable/nav_item_driving_history"
+            android:checkable="true"
+            android:title="@string/menu_driving_history" />
+
+        <item
+            android:id="@+id/nav_inner_parking_location"
+            android:icon="@drawable/nav_item_parking_record"
+            android:checkable="true"
+            android:title="@string/menu_parking_location_record" />
+
+        <item
+            android:id="@+id/nav_your_vehicles"
+            android:icon="@drawable/nav_item_your_vehicles"
+            android:checkable="true"
+            android:title="@string/menu_your_vehicles" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/nav_item_about_us"
+            android:checkable="true"
+            android:title="@string/menu_about_us" />
+
+        <item
+            android:id="@+id/nav_unregisterUser"
+            android:icon="@drawable/nav_item_unregister_user"
+            android:checkable="true"
+            android:title="@string/menu_unregister_user" />
+
+        <item
+            android:id="@+id/nav_privacy_policy"
+            android:icon="@drawable/nav_item_privacy_policy"
+            android:checkable="true"
+            android:title="@string/menu_privacy_policy" />
+
+        <item
+            android:id="@+id/nav_change_password"
+            android:icon="@drawable/nav_item_change_password"
+            android:checkable="true"
+            android:title="@string/menu_change_password" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/nav_item_logout"
+            android:checkable="true"
+            android:title="@string/menu_logout" />
+    </group>
+</menu>

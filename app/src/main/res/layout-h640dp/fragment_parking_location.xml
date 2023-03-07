@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/root_container_parking_location"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Parking location text field's container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_parking_location_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHeight_percent="0.52"
+        android:foregroundGravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_last_ride_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/labelLastRide"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_trip_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2 Min"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_last_trip"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/constraint_layout_border"
+            app:layout_constraintStart_toStartOf="@+id/tv_last_ride_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_trip_duration"
+            map:layout_constraintBottom_toTopOf="@+id/tv_map_header"
+            map:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/tv_last_ride_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/roboto"
+                tools:text="Mon, 31 July 2020"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/view_date_separator"
+                app:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintBottom_toTopOf="@id/view_date_separator" />
+
+            <TextView
+                android:id="@+id/tv_trip_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/blueRideDetails"
+                map:layout_constraintBottom_toTopOf="@id/view_date_separator"
+                map:layout_constraintEnd_toEndOf="@id/view_date_separator"
+                map:layout_constraintTop_toTopOf="parent"
+                tools:text="22 KM" />
+
+            <View
+                android:id="@+id/view_date_separator"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintVertical_bias=".3" />
+
+            <TextView
+                android:id="@+id/tv_reg_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/icon_bike_blue"
+                android:drawablePadding="8dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/view_date_separator"
+                app:layout_constraintTop_toBottomOf="@+id/view_date_separator"
+                map:layout_constraintBottom_toTopOf="@+id/tv_trip_time"
+                tools:text="HR29XXX2342" />
+
+            <TextView
+                android:id="@+id/tv_trip_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/icon_clock_blue"
+                android:drawablePadding="8dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                map:layout_constraintBottom_toBottomOf="parent"
+                map:layout_constraintStart_toStartOf="@id/view_date_separator"
+                map:layout_constraintTop_toBottomOf="@id/view_date_separator"
+                tools:text="9:35 AM - 10:22 AM" />
+
+            <TextView
+                android:id="@+id/tv_time_taken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/icon_hourglass"
+                android:drawablePadding="8dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/view_date_separator"
+                map:layout_constraintTop_toBottomOf="@+id/tv_trip_time"
+                tools:text="0 Min" />
+
+            <ImageView
+                android:id="@+id/ic_green_dot"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="4dp"
+                android:foregroundGravity="right"
+                android:src="@drawable/ic_dot_green"
+                map:layout_constraintBottom_toBottomOf="@id/tv_reg_num"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toTopOf="@id/tv_reg_num" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_trip_to_from"
+                app:layout_constraintBottom_toTopOf="@id/ic_red_dot"
+                app:layout_constraintStart_toStartOf="@id/ic_green_dot"
+                map:layout_constraintEnd_toEndOf="@id/ic_green_dot"
+                app:layout_constraintTop_toBottomOf="@id/ic_green_dot" />
+
+            <ImageView
+                android:id="@+id/ic_red_dot"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_dot_red"
+                map:layout_constraintBottom_toBottomOf="@id/tv_time_taken"
+                map:layout_constraintEnd_toEndOf="@id/ic_green_dot"
+                map:layout_constraintStart_toStartOf="@id/ic_green_dot"
+                map:layout_constraintTop_toTopOf="@id/tv_time_taken" />
+
+
+            <TextView
+                android:id="@+id/tv_trip_start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:autoSizeTextType="uniform"
+                android:ems="20"
+                android:gravity="fill_horizontal"
+                android:maxWidth="144dp"
+                android:maxLines="2"
+                android:minWidth="96dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/view_date_separator"
+                app:layout_constraintStart_toEndOf="@+id/ic_green_dot"
+                app:layout_constraintTop_toTopOf="@id/tv_reg_num"
+                tools:text="Home > Delhi Motorsasdfasdfasdfasdfasdf" />
+
+            <TextView
+                android:id="@+id/tv_trip_end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:ems="20"
+                android:gravity="fill_horizontal"
+                android:maxWidth="144dp"
+                android:maxLines="2"
+                android:minWidth="96dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_time_taken"
+                app:layout_constraintEnd_toEndOf="@id/view_date_separator"
+                app:layout_constraintStart_toStartOf="@id/tv_trip_start"
+                tools:text="Home > Delhi Motorsasdfasdfasdfasdfasdf" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_map_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/labelMapHeader"
+            android:fontFamily="@font/roboto"
+            android:layout_marginBottom="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_container_parking_location_map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHeight_percent="0.48"
+        android:foregroundGravity="center"
+        android:paddingBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_parking_location_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_map_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardElevation="20dp">
+
+            <fragment
+                android:id="@+id/fragment_google_maps"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_no_parking_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:text="@string/label_no_parking_location_caps"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  * Project Name : EA1H
+  * @company YMSLI
+  * @author  (VE00YM023)
+  * @date    10/2/20 5:00 PM
+  * Copyright (c) 2020, Yamaha Motor Solutions (INDIA) Pvt Ltd.
+  *
+  * Description
+  * __________________________________________________________________________________
+  * This is the layout file for User's Home screen.
+  * __________________________________________________________________________________
+  *
+  * Revision History
+  * __________________________________________________________________________________
+  * Modified By          Modified On         Description
+  * (VE00YM023)   13/02/2020          Added card view's for action buttons
+  * __________________________________________________________________________________
+  -->
+<!-- This is the main container for all the content -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/container_no_bike"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- This is the container for header content (I Love Yamaha, etc.)-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/first_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/fragment_container_home_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- This is the container for parking location map content -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/second_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:elevation="32dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_container"
+        app:layout_constraintBottom_toTopOf="@id/button_container_row_1">
+
+        <FrameLayout
+            android:id="@+id/fragment_container_home_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- This is the container for first row of user interaction buttons (Answer back etc) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_container_row_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="btn_home,separator1,btn_answer_back,separator2,btn_locate_bike,separator3,btn_elock,separator4,btn_hazard"
+            app:flow_wrapMode="aligned"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:foreground="@drawable/bg_card_ripple"
+            app:cardBackgroundColor="@color/btn_home_blue"
+            app:cardElevation="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:foregroundGravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/home_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_home_new" />
+
+                <TextView
+                    android:id="@+id/home_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:lines="1"
+                    android:ems="3"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/menu_home"
+                    android:textSize="11sp"
+                    android:autoSizeMinTextSize="8sp"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/home_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Container for answer back button, it holds an icon and text for the button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_answer_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:foreground="@drawable/bg_card_ripple"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/answer_back_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="12dp"
+                    android:tint="@color/label_trip_detail_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_answer_back_new" />
+
+                <TextView
+                    android:id="@+id/answer_back_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:autoSizeTextType="uniform"
+                    android:maxLines="1"
+                    android:text="@string/btn_label_answer_back_caps"
+                    android:textColor="@color/bt_command_btn_text"
+                    android:lines="2"
+                    android:ems="5"
+                    android:textSize="11sp"
+                    android:autoSizeMinTextSize="8sp"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/answer_back_icon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/separator1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/editTextStyleGray"/>
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/editTextStyleGray"/>
+
+        <View
+            android:id="@+id/separator3"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/editTextStyleGray"/>
+
+        <View
+            android:id="@+id/separator4"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/editTextStyleGray"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_locate_bike"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:foreground="@drawable/bg_card_ripple"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/locate_bike_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="16dp"
+                    android:tint="@color/label_trip_detail_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/ic_locate_my_bike_new" />
+
+                <TextView
+                    android:id="@+id/locate_bike_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/bt_command_btn_text"
+                    android:lines="2"
+                    android:ems="5"
+                    android:textSize="11sp"
+                    android:autoSizeMinTextSize="8sp"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/btn_label_locate_my_bike_caps"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/locate_bike_icon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_elock"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:foreground="@drawable/bg_card_ripple"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/e_lock_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="16dp"
+                    android:tint="@color/label_trip_detail_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_e_lock_new" />
+
+                <TextView
+                    android:id="@+id/e_lock_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/bt_command_btn_text"
+                    android:lines="2"
+                    android:ems="5"
+                    android:textSize="11sp"
+                    android:autoSizeMinTextSize="8sp"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/btn_label_e_lock_setting_caps"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/e_lock_icon"
+                    app:layout_constraintVertical_bias="0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_hazard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:foreground="@drawable/bg_card_ripple"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/hazard_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_hazard_new" />
+
+                <TextView
+                    android:id="@+id/hazard_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:textColor="@color/bt_command_btn_text"
+                    android:lines="1"
+                    android:ems="5"
+                    android:textSize="11sp"
+                    android:autoSizeMinTextSize="8sp"
+                    android:textAlignment="center"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/btn_label_hazard_caps"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hazard_icon"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

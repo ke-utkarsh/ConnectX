@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/toolbar_action_add"
+        android:icon="@drawable/ic_add_circle_white"
+        android:title="Add Bike"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/toolbar_action_bluetooth"
+        android:icon="@drawable/ic_bluetooth_white_24dp"
+        android:title="BlueTooth Connected"
+        app:showAsAction="ifRoom"/>
+</menu>
