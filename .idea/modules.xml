@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EA1H.iml" filepath="$PROJECT_DIR$/.idea/modules/EA1H.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EA1H.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EA1H.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EA1H.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EA1H.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EA1H.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EA1H.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EA1H.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EA1H.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pmp3lib/EA1H.pmp3lib.iml" filepath="$PROJECT_DIR$/.idea/modules/pmp3lib/EA1H.pmp3lib.iml" />
+    </modules>
+  </component>
+</project>
