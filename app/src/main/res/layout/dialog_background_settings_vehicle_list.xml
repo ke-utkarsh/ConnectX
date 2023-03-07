@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:minWidth="300dp"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_settings_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:maxLines="3"
+        app:autoSizeTextType="uniform"
+        android:maxEms="25"
+        android:layout_marginEnd="8dp"
+        android:text="@string/background_settings_string"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <CheckBox
+        android:id="@+id/checkbox_dont_ask_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:buttonTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="@id/tv_settings_message"
+        app:layout_constraintTop_toBottomOf="@id/tv_settings_message"/>
+
+    <TextView
+        android:id="@+id/label_dont_ask_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_don_t_ask_me_again"
+        android:textColor="#444444"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/checkbox_dont_ask_again"
+        app:layout_constraintBottom_toBottomOf="@id/checkbox_dont_ask_again"
+        app:layout_constraintStart_toEndOf="@id/checkbox_dont_ask_again"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_settings_message"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_dont_ask_again"
+        app:layout_constraintEnd_toEndOf="@+id/tv_settings_message">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/button_shape_dialog2"
+            android:text="@string/ACTION_CANCEL"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/tv_sign_in_email"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_ok"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sign_in_email" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="start"
+            android:layout_marginStart="4dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_shape_dialog1"
+            android:text="@string/ok"
+            android:textColor="@color/bg_btn_save"
+            app:layout_constraintStart_toStartOf="@+id/tv_sign_in_email"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sign_in_email" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

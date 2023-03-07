@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#21409A</color>
+    <color name="colorPrimaryDark">#21409A</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorEditTextFilled">#959DAD</color>
+    <color name="labelFilterDialog">#80FFFFFF</color>
+    <color name="labelHeaderBikeInfoText">#80FFFFFF</color>
+    <color name="lastRideDetails">#353A50</color>
+    <color name="blueRideDetails">#3497FD</color>
+    <color name="lightBlue">#7585A0</color>
+    <color name="callBlueTextColor">#96B4FE</color>
+    <color name="callBlueTextColorHint">#7193F8</color>
+    <color name="editTextStyleGray">#E5E5E5</color>
+    <color name="bg_toolbar">#07143A</color>
+    <color name="bg_status_bar">#1A3582</color>
+
+
+    <color name="buttonFillGreen">#489D39</color>
+    <color name="buttonStroke">#665EFF</color>
+
+    <color name="facebookBlueTemp">#3B5998</color>
+    <color name="facebookBlue">#4167B2</color>
+
+    <color name="aqua">#00FFFF</color>
+    <color name="homeText">#78849E</color>
+    <color name="colorDarkGray">#717785</color>
+    <color name="colorLightGray">#c8cad0</color>
+    <color name="colorAddBike">#EB4242</color>
+    <color name="com_facebook_blue">#3B5998</color>
+
+    <!-- Application Theme configuration -->
+    <color name="backgroundPrimary">#000000</color>
+    <color name="backgroundSecondary">#353A50</color>
+    <color name="textPrimary">#FFFFFF</color>
+    <color name="textBtn">#FFFFFF</color>
+    <color name="textBtnLarge">#FFFFFF</color>
+    <color name="backgroundInput">#454F63</color>
+    <color name="backgroundBtnPrimary">#0392FA</color>
+    <color name="selected_bike_color">#3497FD</color>
+    <color name="selectedBikeColour">#e6f4ff</color>
+    <color name="tintBtnIcon">#FFFFFF</color>
+
+    <!-- Navigation drawer color configuration -->
+    <color name="textNavItem">#666666</color>
+    <color name="tintNavItem">#6283E3</color>
+    <color name="textNavHeaderTitle">#E5E5E5</color>
+    <color name="textNavHeaderSubTitle">#E5E5E5</color>
+    <color name="bg_nav_item">#FFFFFF</color>
+    <color name="bg_nav_item_selected">#21409A</color>
+    <color name="text_nav_header_edit">#6283E3</color>
+    <color name="tint_nav_icon_checked">#7193F8</color>
+
+
+    <!-- User profile section color configuration -->
+    <color name="text_profile_label">#FFFFFF</color>
+    <color name="text_profile_value">#FFFFFF</color>
+    <color name="color_progress_text">#e6e600</color>
+    <color name="hint_input_user_name">#7695F3</color>
+    <color name="bg_btn_cancel">#E3E3E3</color>
+    <color name="bg_btn_save">#21409A</color>
+    <color name="text_btn_cancel">#666666</color>
+    <color name="text_btn_save">#FFFFFF</color>
+
+    <!-- Image Picker options dialog -->
+    <color name="text_header_image_picker_options">#444444</color>
+    <color name="bg_btn_image_picker_options">#E3E3E3</color>
+    <color name="text_btn_image_picker_options">#222222</color>
+    <color name="bg_btn_image_picker_cancel">#21409A</color>
+    <color name="text_btn_image_picker_options_cancel">#FFFFFF</color>
+
+    <!-- About Us screen colors -->
+    <color name="bg_btn_about_us">#FFFFFF</color>
+    <color name="text_btn_about_us">#222222</color>
+
+    <!-- Privacy Policy screen colors -->
+    <color name="bg_privacy_policy">#0A1C5B</color>
+    <color name="text_privacy_policy">#666666</color>
+
+    <!-- Chassis Number screen colors -->
+    <color name="btn_next_step">#21409A</color>
+
+    <!-- Scan QR screen colors -->
+    <color name="border_qr_scanner">#7193F8</color>
+    <color name="text_qr_confirm_dialog">#444444</color>
+    <color name="text_scanned_qr_code">#21409A</color>
+
+    <!-- Trip details screen colors -->
+    <color name="label_trip_detail_blue">#7193F8</color>
+    <color name="label_trip_detail_white">#FFFFFF</color>
+    <color name="text_trip_detail">#FFFFFF</color>
+
+    <!-- Trip History list item colors -->
+    <color name="bg_header_trip_history_item">#EEEEEE</color>
+    <color name="text_gray_header_trip_history_item">#666666</color>
+    <color name="text_blue_header_trip_history_item">#0B2265</color>
+    <color name="label_blue_trip_history_item">#1A3582</color>
+    <color name="text_black_trip_history_item">#222222</color>
+    
+    <!-- Trip History filter dialog colors -->
+    <color name="label_blue_trip_history_filter">#0B2265</color>
+    <color name="label_gray_trip_history_filter">#666666</color>
+    <color name="separator_line">#E5E5E5</color>
+    <color name="bg_trip_history_filter_item">#E5E5E5</color>
+    <color name="text_blue_trip_history_filter">#0B2265</color>
+    <color name="text_gray_trip_history_filter">#666666</color>
+    <color name="thumb_range_bar_trip_history_distance_filter">#0B2265</color>
+    <color name="pin_color_range_bar_trip_history_filter">#0B2265</color>
+    <color name="bar_color_range_bar_trip_history_filter">#7193F8</color>
+    <color name="bg_bottom_component">#0B2265</color>
+
+    <color name="bg_cancel_enabled">@color/bg_btn_cancel</color>
+    <color name="bg_apply_enabled">@color/bg_btn_save</color>
+    <color name="bg_btn_disabled">#AAAAAA</color>
+
+    <!--Bluetooth button colors-->
+    <color name="bt_command_btn_text">#666666</color>
+    <color name="btn_home_blue">#2044C9</color>
+    <color name="btn_grey_connected_view">#CCCCCC</color>
+    <color name="bt_command_btn_text_disabled">#B4BCC8</color>
+    <color name="bg_icon_elock">#09154C</color>
+    <color name="color_elock_btn">#5377E1</color>
+    <color name="color_elock_left_btn_disabled">#193589</color>
+
+    <!-- Change password dialog colors -->
+    <color name="label_change_password_header">#222222</color>
+    <color name="text_change_password_header">#7193F8</color>
+
+
+    <!-- Notification dialog colors -->
+    <color name="text_notification_dialog">#222222</color>
+
+    <!-- Bike list screen colors -->
+    <color name="label_bike_list_item">#666666</color>
+    <color name="text_bike_list_item">#163fa0</color>
+    <color name="bg_btn_bike_add">#21409A</color>
+    <color name="text_bike_list_item_highlight">#71CAF8</color>
+
+    <!-- ELock screen colors -->
+    <color name="label_gray_e_lock">#AAAAAA</color>
+    <color name="label_radio_button_seq">#5174DD</color>
+    <color name="bg_btn_save_e_lock">#21409A</color>
+    <color name="thumb_e_lock_toggle">#21409A</color>
+    <color name="thumb_e_lock_toggle_off">#8E8E8E</color>
+
+    <!-- Parking location screen colors -->
+    <color name="label_no_parking_record">#7193F8</color>
+
+</resources>

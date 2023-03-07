@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app">
+
+    <TextView
+        android:id="@+id/tv_enable_elock_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/enable_disable_elock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_enable_elock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:checked="true"
+        android:thumb="@drawable/thumb_e_lock_toggle"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_enable_elock_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_enable_elock_label"
+        app:track="@drawable/track_selector_e_lock_toggle" />
+
+    <TextView
+        android:id="@+id/tv_elock_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/elock_note"
+        android:textColor="@color/label_gray_e_lock"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/switch_enable_elock"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_enable_elock_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_enable_elock_label" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_pattern"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_elock_note"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tv_indicator_note"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:maxLines="2"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="14sp"
+            android:textAlignment="center"
+            android:text="@string/elock_note2"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cl_pattern" />
+
+        <TextView
+            android:id="@+id/tv_sequence_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="@string/elock_pattern1"
+            android:textColor="@color/label_radio_button_seq"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/rg_seq1"
+            app:layout_constraintEnd_toStartOf="@id/rg_seq1"
+            app:layout_constraintBottom_toBottomOf="@id/rg_seq1"/>
+
+        <RadioGroup
+            android:id="@+id/rg_seq1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_indicator_note"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RadioButton
+                android:id="@+id/rad_btn_left1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/radio_btn_height_e_lock"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/bg_elock_btns_left"
+                android:button="@null"
+                android:drawableTop="@drawable/icon_left_blue_padding"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:text="@string/left_indicator"
+                android:textAlignment="center"
+                android:textColor="@drawable/btn_text_color_elock"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rad_btn_right1"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/radio_btn_height_e_lock"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:maxLines="1"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:textAlignment="center"
+                android:background="@drawable/bg_elock_btns_left"
+                android:drawableTop="@drawable/icon_right_blue_padding"
+                android:textColor="@drawable/btn_text_color_elock"
+                android:button="@null"
+                android:text="@string/right_indicator"
+                />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_sequence_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="@string/elock_pattern2"
+            android:textColor="@color/label_radio_button_seq"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/rg_seq2"
+            app:layout_constraintEnd_toStartOf="@id/rg_seq2"
+            app:layout_constraintBottom_toBottomOf="@id/rg_seq2"/>
+
+        <RadioGroup
+            android:id="@+id/rg_seq2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/rg_seq1"
+            app:layout_constraintEnd_toEndOf="@id/rg_seq1"
+            app:layout_constraintTop_toBottomOf="@id/rg_seq1">
+
+            <RadioButton
+                android:id="@+id/rad_btn_left2"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/radio_btn_height_e_lock"
+                android:layout_marginEnd="4dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:maxLines="1"
+                android:drawableTop="@drawable/icon_left_blue_padding"
+                android:background="@drawable/bg_elock_btns_left"
+                android:button="@null"
+                android:text="@string/left_indicator"
+                android:textAlignment="center"
+                android:textColor="@drawable/btn_text_color_elock"
+                android:textSize="14sp" />
+
+
+            <RadioButton
+                android:id="@+id/rad_btn_right2"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/radio_btn_height_e_lock"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:maxLines="1"
+                android:layout_marginStart="4dp"
+                android:button="@null"
+                android:background="@drawable/bg_elock_btns_left"
+                android:drawableTop="@drawable/icon_right_blue_padding"
+                android:textColor="@drawable/btn_text_color_elock"
+                android:text="@string/right_indicator"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_sequence_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="@string/elock_pattern3"
+            android:textColor="@color/label_radio_button_seq"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/rg_seq3"
+            app:layout_constraintEnd_toStartOf="@id/rg_seq3"
+            app:layout_constraintBottom_toBottomOf="@id/rg_seq3"/>
+
+        <RadioGroup
+            android:id="@+id/rg_seq3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/rg_seq2"
+            app:layout_constraintTop_toBottomOf="@id/rg_seq2"
+            app:layout_constraintEnd_toEndOf="@id/rg_seq2">
+
+            <RadioButton
+                android:id="@+id/rad_btn_left3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/radio_btn_height_e_lock"
+                android:layout_marginEnd="4dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:maxLines="1"
+                android:drawableTop="@drawable/icon_left_blue_padding"
+                android:background="@drawable/bg_elock_btns_left"
+                android:button="@null"
+                android:text="@string/left_indicator"
+                android:textAlignment="center"
+                android:textColor="@drawable/btn_text_color_elock"
+                android:textSize="14sp" />
+
+
+            <RadioButton
+                android:id="@+id/rad_btn_right3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/radio_btn_height_e_lock"
+                android:layout_marginStart="4dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:maxLines="1"
+                android:button="@null"
+                android:background="@drawable/bg_elock_btns_left"
+                android:drawableTop="@drawable/icon_right_blue_padding"
+                android:textColor="@drawable/btn_text_color_elock"
+                android:text="@string/right_indicator"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_sequence_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="@string/elock_pattern4"
+            android:textColor="@color/label_radio_button_seq"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/rg_seq4"
+            app:layout_constraintEnd_toStartOf="@id/rg_seq4"
+            app:layout_constraintBottom_toBottomOf="@id/rg_seq4"/>
+
+        <RadioGroup
+            android:id="@+id/rg_seq4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/rg_seq3"
+            app:layout_constraintTop_toBottomOf="@id/rg_seq3"
+            app:layout_constraintEnd_toEndOf="@id/rg_seq3">
+
+            <RadioButton
+                android:id="@+id/rad_btn_left4"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/radio_btn_height_e_lock"
+                android:layout_marginEnd="4dp"
+                android:drawableTop="@drawable/icon_left_blue_padding"
+                android:background="@drawable/bg_elock_btns_left"
+                android:button="@null"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:maxLines="1"
+                android:text="@string/left_indicator"
+                android:textColor="@drawable/btn_text_color_elock"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+
+            <RadioButton
+                android:id="@+id/rad_btn_right4"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/radio_btn_height_e_lock"
+                android:layout_marginStart="4dp"
+                android:button="@null"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:maxLines="1"
+                android:text="@string/right_indicator"
+                android:background="@drawable/bg_elock_btns_left"
+                android:drawableTop="@drawable/icon_right_blue_padding"
+                android:textColor="@drawable/btn_text_color_elock"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_set_elock"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:background="@color/bg_btn_save_e_lock"
+        android:text="@string/save_elock"
+        android:textAllCaps="false"
+        android:textColor="@color/textBtnLarge"
+        android:textSize="12sp"
+        app:layout_constraintVertical_bias=".7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_pattern" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,437 @@
+<resources>
+    <string name="app_name">Y-Connect X</string>
+    <string name="searching">Searching</string>
+    <string name="location_permission_required">Location permission is required in order to connect with vehicle, trip creation, etc.</string>
+
+    <!--User validation acknowledgements-->
+    <string name="invalid_phone_number_email">Invalid Email</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="network_connection_error">No internet connection</string>
+    <string name="disconnection_dialog_message">Are you sure you want to disconnect?</string>
+    <string name="connection_dialog_message">Do you want to connect this vehicle?</string>
+    <string name="turn_on_bt_dialog">Please Turn On Bluetooth First!</string>
+    <string name="last_trip_info_wrong">Something went wrong while setting last trip info</string>
+    <string name="turn_on_gps_dialog">Please Turn On GPS First!</string>
+    <string name="foreground_service_notif_message">Wear helmet drive safe</string>
+    <string name="welcome_to_yamaha_message">To the World of YAMAHA</string>
+    <string name="welcome_string">Welcome</string>
+    <string name="welcome_connect_message">An Application to connect your vehicle with\nyour mobile and much more.</string>
+    <string name="access_location_dialog">Please permit app to access device location</string>
+    <string name="something_went_wrong">Something went wrong!! Try again</string>
+    <string name="trip_sync_success">Driving history updated</string>
+    <string name="bike_list_sync_success">Vehicle list updated</string>
+    <string name="label_ok">OK</string>
+    <string name="no_bikes_found">No Vehicles Added</string>
+    <string name="add_bike_label">ADD VEHICLES</string>
+    <string name="na">NA</string>
+    <string name="similar_elock_pattern">ELock pattern cannot be LLLL or RRRR</string>
+    <string name="elock_setting">E-LOCK Setting</string>
+    <string name="elock_string">E-Lock</string>
+    <string name="elock_string_caps">E-LOCK</string>
+    <string name="enable_disable_elock">ENABLE ELOCK</string>
+    <string name="elock_note">NOTE : Pattern should not consist\nof all repetitive actions.</string>
+    <string name="elock_note2">Select indicator pattern sequence\nfor unlocking vehicle without Mobile app</string>
+    <string name="elock_set_ack">Pattern Successfully set. Please turn Ignition switch OFF!</string>
+    <string name="elock_not_set_ack">Cannot set ELock pattern</string>
+    <string name="elock_disable_ack">ELock pattern disabled</string>
+    <string name="elock_disable_fail_ack">Cannot reset ELock pattern</string>
+    <string name="elock_pattern1">1</string>
+    <string name="elock_pattern2">2</string>
+    <string name="elock_pattern3">3</string>
+    <string name="elock_pattern4">4</string>
+    <string name="ecu_disconnected">Vehicle is disconnected!</string>
+    <string name="hazard_activated">Hazard On</string>
+    <string name="connected_string">CONNECTED</string>
+    <string name="hazard_already_active">Hazard is already Active!</string>
+    <string name="ignition_on">Ignition On</string>
+    <string name="ignition_off">Ignition is turned OFF!</string>
+    <string name="choose_another_pattern">"Please choose pattern other than LLLL or RRRR</string>
+    <string name="unable_to_connect">Unable to connect</string>
+    <string name="disconnected_successfully">Disconnected successfullly</string>
+    <string name="disconnected_failed">Disconnection failed</string>
+    <string name="able_to_connect">Vehicle is Connected!</string>
+    <string name="auth_failure">Invalid credentials</string>
+    <string name="email_verification_pending">Check your email and then login</string>
+    <string name="email_verification_pending_title">Email verification pending</string>
+    <string name="agreement">Agreement</string>
+    <string name="brake_counts">BRAKE COUNTS</string>
+    <string name="bike_deletion_ack">Vehicle deleted successfully</string>
+    <string name="ble_info_text">Please turn ON the bluetooth to connect the vehicle.</string>
+    <!--OTP Number Check-->
+    <string name="otp_digit_empty">Number cannot be blank</string>
+    <string name="otp_digit_invalid">Invalid input</string>
+
+    <!--Entrance strings-->
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="continue_label">Continue</string>
+    <string name="next_label">Next</string>
+    <string name="empty_field">Field can not be empty</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="use_strong_password">Use Strong Password</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="otp_default">0</string>
+    <string name="name_label">Name</string>
+
+
+    <!-- Email validation messages -->
+    <string name="invalid_email">Please enter a valid email address</string>
+    <string name="invalid_phone">Please enter a valid phone number of 10 digits</string>
+    <string name="email_check">A mail has been sent to your Registered Email Id for changing password</string>
+    <string name="leading_space">Please remove leading spaces from input</string>
+    <string name="trailing_space">Please remove trailing spaces from input</string>
+
+    <!-- Name validation messages -->
+    <string name="invalid_name">Name can only contain alphabets</string>
+    <string name="empty_password">Please enter password</string>
+    <string name="empty_chassis">Please enter chassis number</string>
+    <string name="empty_otp">Please enter OTP</string>
+    <string name="invalid_password_length">Password must be at least 8 characters long</string>
+    <string name="invalid_chassis_number">Chassis number is invalid</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_phone">Phone</string>
+    <string name="password_changed_success">Password changed successfully</string>
+    <string name="bike_added">Vehicle added successfully</string>
+    <string name="text_splash_button">LET\'S START</string>
+    <string name="lable_splash">THE BEST WAY TO CONNECT WITH US</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Change password messages -->
+    <string name="mismatch_new_password">New password mismatch</string>
+
+    <string name="menu_home">HOME</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="place_holder_user_name">Jony Blake</string>
+    <string name="menu_driving_history">RIDING HISTORY</string>
+    <string name="menu_bike_health">Vehicle Health</string>
+    <string name="menu_contact_us">Contact Us</string>
+    <string name="menu_about_us">ABOUT US</string>
+    <string name="menu_unregister_user">UNREGISTER USER</string>
+    <string name="menu_logout">LOGOUT</string>
+    <string name="place_holder_user_email">\@aureliensalomon</string>
+    <string name="menu_your_vehicles">YOUR VEHICLES</string>
+    <string name="menu_change_password">CHANGE PASSWORD</string>
+    <string name="menu_privacy_policy">PRIVACY POLICY</string>
+    <string name="btn_label_answer_back">Answer Back</string>
+    <string name="btn_label_answer_back_caps">ANSWER BACK</string>
+    <string name="btn_label_driving_history">Driving History</string>
+    <string name="btn_label_riding_history">Riding History</string>
+    <string name="btn_label_riding_history_caps">RIDING HISTORY</string>
+    <string name="btn_label_locate_my_bike">Locate My Vehicle</string>
+    <string name="btn_label_locate_my_bike_caps">LOCATE MY VEHICLE</string>
+    <string name="progress_locate_my_bike">Locate My Vehicle is in progress…</string>
+    <string name="progress_answer_back">Answer Back is in progress…</string>
+    <string name="progress_elock">Writing E-Lock…</string>
+    <string name="connecting_bike">Connecting vehicle…</string>
+    <string name="disconnecting_bike">Disconnecting vehicle…</string>
+    <string name="btn_label_e_lock_setting">E-Lock Settings</string>
+    <string name="btn_label_e_lock_setting_caps">E-LOCK SETTINGS</string>
+    <string name="btn_label_hazard">  Hazard  </string>
+    <string name="btn_label_hazard_caps">HAZARD</string>
+    <string name="btn_label_parking_location_record">Parking Record</string>
+    <string name="btn_label_parking_location_record_caps">PARKING RECORD</string>
+    <string name="title_activity_dummy_maps">Map</string>
+    <string name="title_activity_dummy">Map</string>
+    <string name="title_activity_temp">Map</string>
+
+
+    <string name="launch_activity">Launch activity</string>
+    <string name="location_unknown">Location Unknown</string>
+    <string name="location_updates_label">Location Updates</string>
+
+    <string name="permission_rationale">Location permission needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core functionality.</string>
+    <string name="settings">Settings</string>
+    <string name="ok">OK</string>
+
+    <string name="enable_foreground_only_location">Enable foreground only location</string>
+    <string name="disable_foreground_only_location">Disable foreground only location</string>
+
+    <string name="enable_foreground_and_background_location">Enable foreground and background location</string>
+    <string name="disable_foreground_and_background_location">Disable foreground and background location</string>
+
+    <string name="location_updated">Location Updated: %1$s</string>
+
+    <string name="preference_file_key">com.example.android.while_in_use_location.PREFERENCE_FILE_KEY</string>
+    <string name="yamaha">YAMAHA</string>
+    <string name="label_me">I</string>
+    <string name="place_holder_bike_name">MT-15</string>
+    <string name="place_holder_bike_tag">The Dark Warrier</string>
+    <string name="place_holder_bike_no">HR29K-6422</string>
+    <string name="place_holder_bike_status">Locked</string>
+    <string name="left_indicator">LEFT INDICATOR</string>
+    <string name="right_indicator">RIGHT INDICATOR</string>
+    <string name="save_elock">SAVE E-LOCK SEQUENCE</string>
+
+    <!-- DIFFERENT ACTION TEXTS -->
+    <string name="ACTION_YES">Yes</string>
+    <string name="ACTION_NO">No</string>
+    <string name="ACTION_OK">OK</string>
+    <string name="ACTION_CANCEL">Cancel</string>
+    <string name="ACTION_CONTINUE">Continue</string>
+    <string name="ACTION_CONFIRM">Confirm</string>
+
+    <string name="user_agreement">
+        END USER LICENCE AGREEMENT\n
+        BEFORE ACCEPTING THIS AGREEMENT PLEASE READ THIS AGREEMENT CAREFULLY BY PRESSING “ACCEPT” BUTTON\n\n
+
+        1. I accept to share vehicle diagnosis data with Yamaha dealer for providing proactive support\n\n
+
+        2. I  accept to receive marketing material from Yamaha\n\n
+
+        3. I accept Yamaha/Yamaha dealer to use my riding habit and vehicle riding information for proving proactive support.
+    </string>
+
+    <!-- ALERT MESSAGES -->
+    <string name="message_logout">ARE YOU SURE YOU WANT TO LOGOUT?</string>
+    <string name="reset_password">RESET PASSWORD</string>
+    <string name="hint_new_password">NEW PASSWORD</string>
+    <string name="hint_confirm_new_password">CONFIRM NEW PASSWORD</string>
+    <string name="label_user_name">VEHICLE OWNER NAME</string>
+    <string name="alert_label">ALERT</string>
+    <string name="error_label">ERROR</string>
+    <string name="label_mobile_number">MOBILE NUMBER</string>
+    <string name="place_holder_mobile_no">+91 9876543210</string>
+    <string name="label_dob">DATE OF BIRTH</string>
+    <string name="place_holder_dob">10 JAN 1991</string>
+    <string name="label_email">EMAIL ID</string>
+    <string name="label_registered_mobile_number">REGISTERED MOBILE NUMBER</string>
+    <string name="cannot_determine_unique">Cannot determine device uniqueness!! Contact Support</string>
+    <string name="label_address">ADDRESS</string>
+    <string name="place_holder_address">Saket, Delhi, 11011</string>
+    <string name="place_holder_user_info">30 Year, Male</string>
+
+    <string name="no_parking_location">No parking location available</string>
+    <string name="application_update_message">Application update is available, Please update to continue</string>
+    <string name="cancel">Cancel</string>
+    <string name="labelVehicle">VEHICLE</string>
+    <string name="labelDate">DATE</string>
+    <string name="labelFromDate">FROM</string>
+    <string name="labelToDate">TO</string>
+    <string name="labelDistance">DISTANCE</string>
+    <string name="labelDistanceCat1"><![CDATA[< 50]]></string>
+    <string name="labelDistanceCat2">50 - 100</string>
+    <string name="labelDistanceCat3"><![CDATA[> 100]]></string>
+    <string name="labelBreakCat1"><![CDATA[< 50]]></string>
+    <string name="labelBreakCat2">50 - 100</string>
+    <string name="labelBreakCat3"><![CDATA[> 100]]></string>
+    <string name="labelAverageSpeed">AVERAGE SPEED</string>
+    <string name="labelSpeedCat1"><![CDATA[< 40]]></string>
+    <string name="labelSpeedCat2">40 - 80</string>
+    <string name="labelSpeedCat3"><![CDATA[> 80]]></string>
+    <string name="btnClear">CLEAR</string>
+    <string name="btnApply">APPLY</string>
+    <string name="titleTripHistory">DRIVING HISTORY</string>
+    <string name="labelNoTripsFound">No Trips found</string>
+    <string name="titleTripDetail">TRIP DETAILS</string>
+    <string name="labelBikeModel">VEHICLE MODEL</string>
+    <string name="labelVehicleRegNo">VEHICLE REG. NUMBER</string>
+    <string name="labelTripStartDateTime">START DATE/TIME</string>
+    <string name="labelTripEndDateTime">END DATE/TIME</string>
+    <string name="labelTripFrom">FROM</string>
+    <string name="labelTripTo">TO</string>
+    <string name="labelTripDistance">DISTANCE</string>
+    <string name="placeholderTripFrom">19/6 Mathura Road, Yamaha Faridbad 19/6 Mathura Road, Yamaha Faridbad 19/6 Mathura Road, Yamaha Faridbad</string>
+    <string name="placeHolderTripTime">JAN 10 - 12:30 PM</string>
+    <string name="listItemLabelTripTo">To</string>
+    <string name="listItemLabelTripFrom">From</string>
+    <string name="listItemPlaceHolderTripFrom">Red Fort Delhi</string>
+    <string name="listItemPlaceHolderTripTo">Hawa Mahal Jaipur</string>
+    <string name="labelTripStatusCompleted">Completed</string>
+    <string name="labelTripStatusOnGoing">On Going</string>
+    <string name="placeHolderBikeModel">2019</string>
+    <string name="placeHolderBikeRegNo">DL 5C AV 2558</string>
+    <string name="placeHolderTripStart">06:24, DEC 12</string>
+    <string name="placeHolderTripEnd">07:30, DEC 12</string>
+    <string name="placeHolderTripDistance">19.5 M</string>
+    <string name="placeHolderTripSpeed">10 Km/hr</string>
+    <string name="labelLastRide">Your Last Ride</string>
+    <string name="labelMapHeader">Last Known Parking Record</string>
+
+
+    <!-- Image Picker Strings -->
+    <string name="msg_error_unable_select_profile_pic">Unable to set profile image. Please try again!</string>
+    <string name="lbl_set_profile_photo">Set profile image</string>
+    <string name="lbl_take_camera_picture">Take a picture</string>
+    <string name="lbl_choose_from_gallery">Choose from gallery</string>
+    <string name="profile_label">PROFILE</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="logout_push_notif_key">LOGOUT_PUSH_NOTIF_KEY</string>
+
+    <!-- font families -->
+    <string name="font_family_light">sans-serif-light</string>
+    <string name="font_family_medium">sans-serif-medium</string>
+    <string name="font_family_regular">sans-serif</string>
+    <string name="font_family_condensed">sans-serif-condensed</string>
+    <string name="font_family_black">sans-serif-black</string>
+    <string name="font_family_thin">sans-serif-thin</string>
+    <string name="dialog_permission_title">Grant Permissions</string>
+    <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="dialog_camera_permission">Camera permission is required to scan QR code. You can grant them in settings.</string>
+    <string name="dialog_camera_storage_permission">Camera and storage permission are required to update image. You can grant them in settings.</string>
+    <string name="label_sign_up_success">Thank you for registering with us.\nPlease verify your account by clicking activation link on your email.</string>
+    <string name="label_go_to_login">GO TO LOGIN</string>
+    <string name="go_to_settings">GOTO SETTINGS</string>
+    <string name="label_image_selection">CHANGE PROFILE IMAGE</string>
+    <string name="label_use_camera">Camera</string>
+    <string name="label_use_gallery">Gallery</string>
+    <string name="distanceSuffix">KM</string>
+    <string name="labelSeparator"><![CDATA[>]]></string>
+    <string name="btn_chassis_next">Next Step</string>
+    <string name="label_enter_chassis_no">Enter your Chassis No</string>
+    <string name="enter_reg_email">Enter Your Registered Email ID</string>
+    <string name="background_settings_string">Go to app settings and allow app to always run in background</string>
+    <string name="elock_enabled_message">ELock has been enabled</string>
+    <string name="elock_disabled_message">ELock has been disabled</string>
+    <string name="label_scan_qr_code">Scan Bluethooth QR Code</string>
+    <string name="label_verify">VERIFY</string>
+    <string name="hint_chassis_number">CHASSIS NO</string>
+    <string name="label_enter_your">ENTER YOUR</string>
+    <string name="label_chassis_no">CHASSIS NO</string>
+    <string name="label_logout">LOGOUT</string>
+    <string name="label_retry">Retry</string>
+    <string name="label_sync">Synchronizing Please wait...</string>
+    <string name="message_update_available">New version available, Please update</string>
+    <string name="message_no_app_found">No application found to perform this action</string>
+    <string name="update_url_not_found">Error: Update URL not found</string>
+    <string name="message_force_update">Application update is required, Click OK to update now</string>
+    <string name="label_accept">ACCEPT</string>
+    <string name="label_scan_bluetooth">SCAN BLUETOOTH QR CODE</string>
+    <string name="label_qr_code">QR Code</string>
+    <string name="label_sync_failed">Synchronization failed</string>
+    <string name="scan_success_title">Scan Successful</string>
+    <string name="message_scan_success">Scanning %1</string>
+    <string name="scan_canceled">Scan canceled</string>
+    <string name="label_enter_otp">ENTER OTP</string>
+    <string name="hint_otp">XXXX</string>
+    <string name="message_bike_added_success">Vehicle added successfully</string>
+    <string name="failure_otp_resend">OTP Sending failed, Please try again!!</string>
+    <string name="success_otp_resend">OTP sent successfully</string>
+    <string name="success_bike_registration">Registration successful</string>
+    <string name="invalid_otp">\"Invalid OTP\"</string>
+    <string name="content_about_us">Yamaha Motor made its initial foray into India in 1985 as a joint-venture.
+        In August 2001, it became a 100% subsidiary of Yamaha Motor Co., Ltd, Japan (YMC).
+        In 2008, Mitsui \u0026 Co. Ltd. entered into an agreement with YMC to become a joint-investor in India Yamaha Motor Private Limited (IYM).
+        IYM’s manufacturing facilities comprise of 3 State-of-the-art Plants at Surajpur (Uttar Pradesh),
+        Faridabad (Haryana) and Kanchipuram (Tamil Nadu).
+        The infrastructure at these plants supports production of two-wheelers and parts for the domestic as well as overseas markets.
+        IYM is highly customer-driven and has a country-wide network of over 2,200 customer touch-points including 500 dealers.
+        Presently, its product portfolio includes Sports model YZF-R3 (321 cc), YZF-R15 version 3.0 (155 cc), YZF-R15 S (149 cc);
+        Blue-Core Technology enabled models such as FZ 25 (249 cc), Fazer 25 (249 cc),
+        FZ-S FI (Fuel-Injected, 149 cc), FZ FI (Fuel-Injected, 149 cc), Fazer FI (Fuel-Injected, 149 cc), SZ-RR version 2.0 (149 cc),
+        Saluto (125 cc), Saluto RX (110 cc), Cygnus Ray-ZR (113 cc),
+        Fascino (113 cc), Cygnus Alpha (113 cc), Cygnus Ray Z (113 cc); latest superbike MT-09 (847 cc) and YZF-R1 (998 cc).
+        The other Yamaha Motor Group Companies in India include:
+        Yamaha Motor India Pvt. Ltd. (YMI) is a 100% subsidiary of YMC and functions as the regional
+        headquarters and corporate control body of India business operations for YMC.
+        YMI is responsible for Corporate Planning \u0026 Strategy, Business Planning \u0026 Business Expansion and Quality \u0026
+        Compliance Assurance of Yamaha India Business.
+        Yamaha Motor India Sales Pvt. Ltd. (YMIS) is a 100% subsidiary of YMC and supports IYM to market and sell its motorcycles \u0026
+        scooters in domestic as well as export markets.
+        Yamaha Motor Research \u0026 Development India Pvt. Ltd. (YMRI) is a 100% subsidiary of YMC and has been established by YMC
+        to provide R\u0026D and Product development services to IYM for its domestic as well as export markets.
+        YMRI is the fifth overseas R\u0026D headquarters for Yamaha Motor Group following Italy, Taiwan, China, and Thailand.</string>
+    <string name="header_about_us">About Us</string>
+    <string name="header_privacy_policy">Privacy Policy</string>
+    <string name="app_version_label">Version: </string>
+    <string name="success_profile_update">Profile update successful</string>
+    <string name="failure_profile_update">Profile update failed, Please try again</string>
+
+    <!--DAPIOT Values-->
+    <string name="join_key_value">00000000</string>
+    <string name="join_key_key">joinkey</string>
+    <string name="sensor_x_key">x</string>
+    <string name="sensor_y_key">y</string>
+    <string name="sensor_z_key">z</string>
+    <string name="contents_key">Contents</string>
+    <string name="ccu_id_key">CCU-ID</string>
+    <string name="accelerometer_key">Accelerometer</string>
+    <string name="gyro_key">Gyro</string>
+    <string name="gps_key">GPS</string>
+    <string name="dap_iot_trip_key">dapIotTripId</string>
+    <string name="device_type_key">DEVICE-TYPE-ID</string>
+    <string name="user_id_key">USER-ID</string>
+    <string name="acc_auth_key">AccAuth</string>
+    <string name="gigya_uuid_key">GIGYA-UUID</string>
+    <string name="timestamp_key">timestamp</string>
+    <string name="app_info_key">APP-Info</string>
+    <string name="os_info_key">OS-Info</string>
+    <string name="project_id_dapiot_value">0002</string>
+    <string name="os_name_value">Android</string>
+    <string name="app_name_value">EA1H+</string>
+    <string name="gpsd_file_name_value">_GPSD_</string>
+    <string name="stdd_file_name_value">_STDD_</string>
+    <string name="dap_iot_salt">6KbMqw</string>
+    <string name="sha_256_value">SHA-256</string>
+    <string name="place_holder_na">NA</string>
+    <string name="hint_user_name_input">Please Enter name</string>
+    <string name="btn_save">SAVE</string>
+    <string name="btn_company_profile">COMPANY PROFILE</string>
+    <string name="btn_csr">CSR</string>
+    <string name="btn_awards">AWARDS</string>
+    <string name="btn_founding_history">FOUNDING HISTORY</string>
+    <string name="btn_manufacturing_process">MANUFACTURING PROCESS</string>
+    <string name="btn_racing">RACING</string>
+    <string name="btn_yamaha_s_manufacturing">YAMAHA\'S MANUFACTURING</string>
+    <string name="string_privacy_policy">PRIVACY POLICY</string>
+    <string name="label_change_password_header">CHANGE PASSWORD</string>
+    <string name="label_change_password_hint">Enter Your Registered Email ID</string>
+    <string name="ic_dashed_line">--------------------------------------------------</string>
+    <string name="placeholder_na">NA</string>
+    <string name="completed">COMPLETED</string>
+    <string name="label_filters">FILTERS</string>
+    <string name="label_vehicle">Vehicle</string>
+    <string name="label_date">Date</string>
+    <string name="placeholder_date">--/--/--</string>
+    <string name="label_from">From</string>
+    <string name="label_to">To</string>
+    <string name="label_distance">Distance</string>
+    <string name="placeholder_distance">0 Km</string>
+    <string name="placeholder_speed">0 Km/h</string>
+    <string name="placeholder_distance_max"><![CDATA[>100 Km]]></string>
+    <string name="placeholder_speed_max"><![CDATA[>100 Km/h]]></string>
+    <string name="label_bar">|</string>
+    <string name="label_brake_counts">Brake counts</string>
+    <string name="max_break_count">>100</string>
+    <string name="placeholder_brake_count">0</string>
+    <string name="label_edit_profile">Edit Profile</string>
+    <string name="menu_parking_location_record">PARKING RECORD</string>
+    <string name="label_brake_count">BRAKE COUNT</string>
+    <string name="label_battery_voltage">BATTERY VOLTAGE</string>
+    <string name="placeholder_confirmation">This is a confirmation message, Do you want to continue?</string>
+    <string name="nav_label_profile">PROFILE</string>
+    <string name="label_add_bike">ADD VEHICLE</string>
+    <string name="label_no_internet_dialog">Internet connection not available.\nPlease try again!</string>
+    <string name="label_forgot_your_password">Forgot your password?</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="label_bike_model">MODEL</string>
+    <string name="label_bike_registration">REG. NUMBER</string>
+    <string name="nav_label_e_lock">E-LOCK SETTINGS</string>
+    <string name="label_no_parking_location_caps">PARKING RECORD NOT FOUND</string>
+    <string name="label_no_parking_location">Parking Record Not Found</string>
+    <string name="label_don_t_ask_me_again">Don\'t ask me again</string>
+
+    <string name="dialog_bike_delete_confirmation">Are you sure you want to delete this vehicle?</string>
+    <string name="dialog_disconnect_before_delete">Please disconnect first</string>
+
+    <!--User ack of BT Connection-->
+    <string name="scanning_devices">Finding your vehicle</string>
+    <string name="out_of_range">Phone is out of range</string>
+    <string name="scanning_error">Error finding your vehicle</string>
+    <string name="vehicle_found">Vehicle found..connecting now</string>
+    <string name="bluetooth_issue_retry">Seems connection issue.Lets try again</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

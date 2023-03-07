@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    /*
+    * Project Name : EA1H
+    * @company YMSLI
+    * @author  (VE00YM023)
+    * @date    18/02/2020 10:00 AM
+    * Copyright (c) 2020, Yamaha Motor Solutions (INDIA) Pvt Ltd.
+    *
+    * Description
+    * ___________________________________________________________________________________
+    * This layout file represents the header section when at least one bike has been added,
+    * hence we show the 'I Love Yamaha' as well as the device information.
+    * ___________________________________________________________________________________
+    *
+    * Revision History
+    * ___________________________________________________________________________________
+    * Modified By          Modified On         Description
+    * ___________________________________________________________________________________
+    */
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_home_header_double"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/home_header_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <!-- This section contains the left part of double home header -->
+    <!-- It contains the I Love Yamaha content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/section_home_header_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/left_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageHomeHeader"
+                android:visibility="gone"
+                android:src="@drawable/bike_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- This section contains the right part of double home header -->
+    <!-- It contains the text content related to current bike -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/section_home_header_right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_connected_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="16dp"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/home_header_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/iv_connected_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_connected_indication"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_home_header_bike_name"
+            app:layout_constraintStart_toStartOf="@id/separator_connected"
+            app:layout_constraintTop_toTopOf="@+id/tv_home_header_bike_name" />
+
+        <TextView
+            android:id="@+id/tv_home_header_bike_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:autoSizeTextType="uniform"
+            android:lines="2"
+            android:maxLines="2"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/tv_connected"
+            app:layout_constraintEnd_toEndOf="@id/separator_connected"
+            app:layout_constraintStart_toStartOf="@id/tv_connected"
+            tools:text="@string/place_holder_bike_name" />
+
+        <TextView
+            android:id="@+id/tv_home_header_bike_tag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="2019"
+            android:visibility="gone"
+            android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/tv_home_header_bike_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_home_header_bike_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_header_bike_name" />
+
+        <TextView
+            android:id="@+id/tv_connected"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/connected_string"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            app:layout_constraintVertical_bias=".85"
+            app:layout_constraintBottom_toTopOf="@+id/separator_connected"
+            app:layout_constraintEnd_toEndOf="@+id/separator_connected"
+            app:layout_constraintStart_toEndOf="@id/iv_connected_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/separator_connected"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintVertical_bias=".53"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/btn_grey_connected_view"/>
+
+
+        <TextView
+            android:id="@+id/tv_home_header_bike_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            tools:text="@string/place_holder_bike_no"
+            android:textColor="@color/white"
+            app:layout_constraintVertical_bias=".01"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/separator_connected"
+            app:layout_constraintStart_toStartOf="@+id/separator_connected"
+            app:layout_constraintTop_toBottomOf="@+id/separator_connected" />
+
+        <ImageView
+            android:id="@+id/iv_brake_icon"
+            android:layout_width="11dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_brake"
+            app:layout_constraintStart_toStartOf="@+id/tv_home_header_current_time"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_header_current_time" />
+
+        <TextView
+            android:id="@+id/tv_brake_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/white"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:maxLength="4"
+            app:layout_constraintStart_toEndOf="@+id/iv_brake_icon"
+            app:layout_constraintTop_toTopOf="@+id/iv_brake_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_brake_icon"
+            android:text="0"/>
+
+        <ImageView
+            android:id="@+id/iv_battery_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_battery"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintTop_toTopOf="@id/tv_battery_value"
+            app:layout_constraintEnd_toStartOf="@id/tv_battery_value"
+            app:layout_constraintBottom_toBottomOf="@id/tv_battery_value"/>
+
+        <TextView
+            android:id="@+id/tv_battery_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_brake_icon"
+            app:layout_constraintEnd_toEndOf="@+id/separator_connected"
+            app:layout_constraintTop_toTopOf="@+id/iv_brake_icon"
+            tools:text="11.44 V" />
+
+        <TextView
+            android:id="@+id/tv_home_header_bike_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="@string/place_holder_bike_status"
+            android:visibility="gone"
+            android:textColor="@color/labelHeaderBikeInfoText"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_home_header_bike_no"
+            app:layout_constraintStart_toStartOf="@+id/tv_home_header_bike_no" />
+
+        <TextView
+            android:id="@+id/tv_home_header_current_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="10 Nov 2019, 06:30 PM"
+            android:autoSizeTextType="uniform"
+            android:layout_marginTop="2dp"
+            android:maxLines="1"
+            android:ems="20"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/separator_connected"
+            app:layout_constraintTop_toBottomOf="@id/tv_home_header_bike_no"
+            app:layout_constraintEnd_toEndOf="@id/separator_connected"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

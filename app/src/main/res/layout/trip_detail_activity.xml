@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app">
+
+    <!-- Toolbar of the activity, contains some actions buttons -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/icon_back"
+        app:title=""
+        app:titleTextColor="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="@string/titleTripDetail"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_connection_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_bluetooth_white_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bike_details_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_map_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <TextView
+            android:id="@+id/tv_bike_model_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/labelBikeModel"
+            android:textSize="11sp"
+            android:textColor="@color/label_trip_detail_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_bike_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_trip_detail"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="@+id/tv_bike_model_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bike_model_label"
+            tools:text="@string/placeHolderBikeModel" />
+
+        <TextView
+            android:id="@+id/tv_vehicle_reg_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/labelVehicleRegNo"
+            android:textSize="11sp"
+            android:textColor="@color/label_trip_detail_blue"
+            app:layout_constraintTop_toTopOf="@id/tv_bike_model_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_bike_model_label"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_vehicle_reg"
+            android:layout_width="0dp"
+            android:autoSizeMinTextSize="12sp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="end"
+            android:textColor="@color/text_trip_detail"
+            app:layout_constraintTop_toBottomOf="@id/tv_vehicle_reg_label"
+            app:layout_constraintStart_toStartOf="@id/tv_vehicle_reg_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@string/placeHolderBikeRegNo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_map_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_trip_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_bike_details_container">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_trip_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_from_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/label_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/labelTripFrom"
+                android:textColor="@color/label_trip_detail_white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ic_green_dot"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_dot_green"
+                app:layout_constraintStart_toEndOf="@id/label_from"
+                app:layout_constraintTop_toTopOf="@id/label_from"
+                app:layout_constraintBottom_toBottomOf="@id/label_from"/>
+
+            <TextView
+                android:id="@+id/ic_dashed_line"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:paddingBottom="4dp"
+                android:maxLines="1"
+                android:text="@string/ic_dashed_line"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@id/ic_green_dot"
+                app:layout_constraintTop_toTopOf="@id/label_from"
+                app:layout_constraintEnd_toStartOf="@id/ic_red_dot"
+                app:layout_constraintBottom_toBottomOf="@id/label_from"/>
+
+            <ImageView
+                android:id="@+id/ic_red_dot"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_dot_red"
+                app:layout_constraintEnd_toStartOf="@id/label_to"
+                app:layout_constraintTop_toTopOf="@id/label_from"
+                app:layout_constraintBottom_toBottomOf="@id/label_from"/>
+
+            <TextView
+                android:id="@+id/label_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/labelTripTo"
+                android:textColor="@color/label_trip_detail_white"
+                android:textSize="16sp"
+                app:layout_constraintHorizontal_bias=".55"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/label_from"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/label_from"/>
+
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textColor="@color/text_trip_detail"
+                app:layout_constraintStart_toStartOf="@id/label_from"
+                app:layout_constraintTop_toBottomOf="@id/label_from"
+                app:layout_constraintEnd_toEndOf="@id/ic_dashed_line"
+                tools:text="@string/placeholderTripFrom" />
+
+            <TextView
+                android:id="@+id/tv_to"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/text_trip_detail"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="@id/label_to"
+                app:layout_constraintTop_toBottomOf="@id/label_to"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="@string/placeholderTripFrom" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/ic_start_time"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container_from_to"/>
+
+        <TextView
+            android:id="@+id/tv_start_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/labelTripStartDateTime"
+            android:textSize="11sp"
+            android:textColor="@color/label_trip_detail_blue"
+            app:layout_constraintStart_toEndOf="@id/ic_start_time"
+            app:layout_constraintTop_toTopOf="@id/ic_start_time"
+            app:layout_constraintBottom_toBottomOf="@id/ic_start_time"/>
+
+        <ImageView
+            android:id="@+id/ic_end_time"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_time"
+            app:layout_constraintHorizontal_bias=".55"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_start_time_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_start_time_label"/>
+
+        <TextView
+            android:id="@+id/tv_end_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:paddingBottom="2dp"
+            android:text="@string/labelTripEndDateTime"
+            android:textSize="11sp"
+            android:textColor="@color/label_trip_detail_blue"
+            app:layout_constraintStart_toEndOf="@id/ic_end_time"
+            app:layout_constraintTop_toTopOf="@id/ic_end_time"
+            app:layout_constraintBottom_toBottomOf="@id/ic_end_time"/>
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/text_trip_detail"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="@id/ic_start_time"
+            app:layout_constraintTop_toBottomOf="@id/ic_start_time"
+            app:layout_constraintEnd_toStartOf="@id/ic_end_time"
+            tools:text="@string/placeHolderTripStart" />
+
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/text_trip_detail"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="@id/ic_end_time"
+            app:layout_constraintTop_toBottomOf="@id/ic_end_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@string/placeHolderTripEnd" />
+
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/label_trip_detail_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_end_time"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ic_distance"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_distance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separator"/>
+
+        <TextView
+            android:id="@+id/tv_distance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textSize="11sp"
+            android:text="@string/labelTripDistance"
+            android:textColor="@color/label_trip_detail_white"
+            app:layout_constraintStart_toEndOf="@id/ic_distance"
+            app:layout_constraintTop_toTopOf="@id/ic_distance" />
+
+        <ImageView
+            android:id="@+id/ic_average_speed"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_avg_speed"
+            app:layout_constraintStart_toStartOf="@id/tv_end_time"
+            app:layout_constraintTop_toTopOf="@id/ic_distance"/>
+
+        <TextView
+            android:id="@+id/tv_speed_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textSize="11sp"
+            android:text="@string/labelAverageSpeed"
+            android:textColor="@color/label_trip_detail_white"
+            app:layout_constraintStart_toEndOf="@id/ic_average_speed"
+            app:layout_constraintTop_toTopOf="@id/ic_average_speed"/>
+
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_trip_detail"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="@+id/tv_distance_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_distance_label"
+            tools:text="@string/placeHolderTripDistance" />
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/label_trip_detail_white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/tv_speed_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_speed_label"
+            app:layout_constraintEnd_toEndOf="@id/tv_speed_label"
+            tools:text="@string/placeHolderTripSpeed" />
+
+
+        <ImageView
+            android:id="@+id/ic_brake_count"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_break_count"
+            app:layout_constraintEnd_toEndOf="@id/ic_distance"
+            app:layout_constraintTop_toBottomOf="@id/ic_distance"/>
+
+        <TextView
+            android:id="@+id/label_brake_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textSize="11sp"
+            android:text="@string/label_brake_count"
+            android:textColor="@color/label_trip_detail_white"
+            app:layout_constraintStart_toEndOf="@id/ic_brake_count"
+            app:layout_constraintBottom_toTopOf="@id/tv_brake_count" />
+
+        <ImageView
+            android:id="@+id/ic_battery_voltage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_battery_voltage"
+            app:layout_constraintEnd_toEndOf="@id/ic_average_speed"
+            app:layout_constraintTop_toTopOf="@id/ic_brake_count"/>
+
+        <TextView
+            android:id="@+id/label_battery_voltage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textSize="11sp"
+            android:text="@string/label_battery_voltage"
+            android:textColor="@color/label_trip_detail_white"
+            app:layout_constraintStart_toEndOf="@id/ic_battery_voltage"
+            app:layout_constraintBottom_toTopOf="@id/tv_battery_voltage"/>
+
+
+        <TextView
+            android:id="@+id/tv_brake_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/text_trip_detail"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="@+id/label_brake_count"
+            app:layout_constraintTop_toTopOf="@id/ic_brake_count"
+            app:layout_constraintBottom_toBottomOf="@id/ic_brake_count"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/tv_battery_voltage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/label_trip_detail_white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/label_battery_voltage"
+            app:layout_constraintTop_toTopOf="@id/ic_battery_voltage"
+            app:layout_constraintBottom_toBottomOf="@id/ic_battery_voltage"
+            tools:text="@string/na" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

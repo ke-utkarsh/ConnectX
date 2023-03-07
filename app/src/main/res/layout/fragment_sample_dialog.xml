@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_dialog_trip_filter"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_percent=".30">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog_trip_filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_vehicle_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/labelVehicle"
+            android:textColor="@color/labelFilterDialog"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_vehicles"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_vehicle_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vehicle_label" />
+
+        <TextView
+            android:id="@+id/tv_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/labelDate"
+            android:textColor="@color/labelFilterDialog"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_vehicles" />
+
+        <TextView
+            android:id="@+id/tv_from_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/labelFromDate"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_vehicle_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date_label" />
+
+        <TextView
+            android:id="@+id/tv_to_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/labelToDate"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_from_date"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date_label"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/tv_distance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/labelDistance"
+            android:textColor="@color/labelFilterDialog"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_from_date" />
+
+        <RadioGroup
+            android:id="@+id/rg_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_distance_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_distance_label">
+
+            <RadioButton
+                android:id="@+id/rad_btn_cat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_filter_button"
+                android:button="@null"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:text="@string/labelDistanceCat1"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rad_btn_cat2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/bg_filter_button"
+                android:button="@null"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:text="@string/labelDistanceCat2"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rad_btn_cat3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/bg_filter_button"
+                android:button="@null"
+                android:padding="2dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:text="@string/labelDistanceCat3"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_brake_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/brake_counts"
+            android:textColor="@color/labelFilterDialog"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rg_distance" />
+
+        <RadioGroup
+            android:id="@+id/rg_brake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_distance_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_brake_count">
+
+            <RadioButton
+                android:id="@+id/rad_brk_cat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_filter_button"
+                android:button="@null"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:text="@string/labelBreakCat1"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rad_brk_cat2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/bg_filter_button"
+                android:button="@null"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:text="@string/labelBreakCat2"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rad_brk_cat3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/bg_filter_button"
+                android:button="@null"
+                android:padding="2dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:text="@string/labelBreakCat3"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_speed_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/labelAverageSpeed"
+            android:textColor="@color/labelFilterDialog"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rg_brake" />
+
+        <RadioGroup
+            android:id="@+id/rg_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_distance_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_speed_label">
+
+            <RadioButton
+                android:id="@+id/rad_btn_speed_cat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_filter_button"
+                android:button="@null"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:text="@string/labelSpeedCat1"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rad_btn_speed_cat2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/bg_filter_button"
+                android:button="@null"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:text="@string/labelSpeedCat2"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rad_btn_speed_cat3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/bg_filter_button"
+                android:button="@null"
+                android:padding="2dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:text="@string/labelSpeedCat3"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_shape_trip_filter"
+            android:text="@string/btnClear"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rg_speed" />
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_shape_trip_filter"
+            android:text="@string/btnApply"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_clear" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/label_name"
+            app:layout_constraintWidth_percent=".2"
+            android:text="Name"
+            style="@style/label_input_dialog_field"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/input_name"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@id/label_name"
+            app:layout_constraintTop_toTopOf="@id/label_name"
+            app:layout_constraintBottom_toBottomOf="@id/label_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bg_input"
+            android:inputType=""
+            style="@style/input_dialog_field" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

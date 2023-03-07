@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="ymsli.com.ea1h.views.home.HomeFragment"
+        android:label="@string/menu_home">
+        <action
+            android:id="@+id/action_nav_home_to_nav_driving_history"
+            app:destination="@id/nav_driving_history"
+            app:launchSingleTop="false" />
+        <action
+            android:id="@+id/action_nav_home_to_parkingLocationFragment"
+            app:destination="@id/nav_inner_parking_location"
+            app:enterAnim="@animator/fragment_fade_enter"
+            app:exitAnim="@animator/fragment_fade_exit"
+            app:popEnterAnim="@animator/fragment_open_enter"
+            app:popExitAnim="@animator/fragment_open_exit" />
+        <action
+            android:id="@+id/home_to_user_profile"
+            app:destination="@id/nav_user_profile" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_your_vehicles"
+            app:destination="@id/nav_your_vehicles" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_your_vehicles"
+        android:name="ymsli.com.ea1h.views.yourvehicles.YourBikesFragment"
+        android:label="@string/menu_your_vehicles" />
+
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="ymsli.com.ea1h.views.home.aboutus.AboutUsFragment"
+        android:label="@string/menu_about_us" />
+    <fragment
+        android:id="@+id/nav_change_password"
+        android:name="ymsli.com.ea1h.views.home.changepassword.ChangePasswordFragment"
+        android:label="@string/menu_change_password" />
+    <fragment
+        android:id="@+id/nav_driving_history"
+        android:name="ymsli.com.ea1h.views.home.drivinghistory.TripHistoryFragment"
+        android:label="@string/menu_driving_history" />
+    <fragment
+        android:id="@+id/nav_privacy_policy"
+        android:name="ymsli.com.ea1h.views.home.privacypolicy.PrivacyPolicyFragment"
+        android:label="@string/menu_privacy_policy" />
+    <fragment
+        android:id="@+id/nav_inner_parking_location"
+        android:name="ymsli.com.ea1h.views.home.parkinglocation.ParkingLocationFragment"
+        android:label="@string/menu_parking_location_record">
+        <argument
+            android:name="loadedInHome"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_user_profile"
+        android:name="ymsli.com.ea1h.views.home.userprofile.UserProfileActivity"
+        android:label="@string/nav_label_profile" />
+    <fragment
+        android:id="@+id/nav_elock"
+        android:name="ymsli.com.ea1h.views.home.elock.ELockFragment"
+        android:label="@string/nav_label_e_lock" />
+    <fragment
+        android:id="@+id/nav_unregisterUser"
+        android:name="ymsli.com.ea1h.views.home.unregisteruser.UnregisterUserFragment"
+        android:label="@string/menu_unregister_user" />
+</navigation>

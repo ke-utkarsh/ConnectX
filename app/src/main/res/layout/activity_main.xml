@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  * Project Name : EA1H
+  * @company YMSLI
+  * @author  (VE00YM023)
+  * @date    10/2/20 5:00 PM
+  * Copyright (c) 2020, Yamaha Motor Solutions (INDIA) Pvt Ltd.
+  *
+  * Description
+  * __________________________________________________________________________________
+  * This is the layout file for User's Home screen.
+  * __________________________________________________________________________________
+  *
+  * Revision History
+  * __________________________________________________________________________________
+  * Modified By          Modified On         Description
+  * __________________________________________________________________________________
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Define the toolbar for this activity -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_home_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/backgroundPrimary"
+        app:menu="@menu/home_toolbar_main_activity"
+        app:title=""
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <!-- This is the main container for all the content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_home_activity">
+
+        <!-- This is the container for header content (I Love Yamaha, etc.)-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/first_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroundPrimary"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Header image left section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header_section_left"
+                android:layout_width="0dp"
+                android:layout_height="168dp"
+                android:background="@drawable/bg_header_container_complete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/header_image_text_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="I"
+                    android:textSize="44dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_heart_home_header"
+                    app:layout_constraintEnd_toStartOf="@+id/img_heart_home_header"
+                    app:layout_constraintTop_toTopOf="@+id/img_heart_home_header" />
+
+                <ImageView
+                    android:id="@+id/img_heart_home_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_heart_24dp_blue" />
+
+                <TextView
+                    android:id="@+id/header_text_yamaha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="YAMAHA"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_heart_home_header" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- This is the container for parking location map content -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/second_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#AAAAAA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.40"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/first_container"/>
+
+        <!-- This is the container for user interaction buttons (Hazard, Find bike etc.)-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/third_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/second_container">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/margin_top"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent=".05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/button_container_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent=".40"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/margin_top">
+
+                <Button
+                    android:id="@+id/answer_button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/com_facebook_blue"
+                    android:singleLine="true"
+                    android:text="Answer Back"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintHeight_percent=".99"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".25" />
+
+                <Button
+                    android:id="@+id/answer_button2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/com_facebook_blue"
+                    android:singleLine="true"
+                    android:text="Answer Back"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent=".99"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".25" />
+
+
+                <Button
+                    android:id="@+id/answer_button3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/com_facebook_blue"
+                    android:singleLine="true"
+                    android:text="Answer Back"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent=".99"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".25" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/margin_middle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent=".05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_container_1"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent=".40"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/margin_middle">
+
+                <Button
+                    android:id="@+id/answer_button4"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/com_facebook_blue"
+                    android:singleLine="true"
+                    android:text="Answer Back"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintHeight_percent=".99"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".25" />
+
+                <Button
+                    android:id="@+id/answer_button5"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/com_facebook_blue"
+                    android:singleLine="true"
+                    android:text="Answer Back"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent=".99"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".25" />
+
+
+                <Button
+                    android:id="@+id/answer_button6"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/com_facebook_blue"
+                    android:singleLine="true"
+                    android:text="Answer Back"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent=".99"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".25" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

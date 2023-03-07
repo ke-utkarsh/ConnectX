@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    /*
+    * Project Name : EA1H
+    * @company YMSLI
+    * @author  (VE00YM023)
+    * @date    18/02/2020 10:00 AM
+    * Copyright (c) 2020, Yamaha Motor Solutions (INDIA) Pvt Ltd.
+    *
+    * Description
+    * ___________________________________________________________________________________
+    * This layout file represents the header section when no bike is added, hence
+    * only 'I Love Yamaha' section is shown to the user.
+    * ___________________________________________________________________________________
+    *
+    * Revision History
+    * ___________________________________________________________________________________
+    * Modified By          Modified On         Description
+    * ___________________________________________________________________________________
+    */
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_home_header_single"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageHomeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  * Project Name : EA1H
+  * @company YMSLI
+  * @author  (VE00YM023)
+  * @date   10/2/20 12:35 PM
+  * Copyright (c) 2020, Yamaha Motor Solutions (INDIA) Pvt Ltd.
+  *
+  * Description
+  * __________________________________________________________________________________
+  * This is the layout file for SplashActivity.
+  * __________________________________________________________________________________
+  *
+  * Revision History
+  * __________________________________________________________________________________
+  * Modified By          Modified On         Description
+  * __________________________________________________________________________________
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.splash.SplashActivity">
+
+    <ImageView
+        android:id="@+id/iv_yamaha_racing"
+        app:layout_constraintWidth_max="240dp"
+        android:layout_width="0dp"
+        app:layout_constraintHeight_max="70dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        app:srcCompat="@drawable/yamaha_racing_logo" />
+
+    <ImageView
+        android:id="@+id/iv_call_blue"
+        app:layout_constraintWidth_max="240dp"
+        android:layout_width="0dp"
+        app:layout_constraintHeight_max="70dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/call_blue_logo" />
+
+
+    <TextView
+        android:id="@+id/tv_splash_yamaha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/lable_splash"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:textColor="@color/callBlueTextColor"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start_splash"
+        app:layout_constraintEnd_toEndOf="@+id/btn_start_splash"
+        app:layout_constraintStart_toStartOf="@+id/btn_start_splash"
+        app:layout_constraintTop_toBottomOf="@+id/iv_call_blue"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <Button
+        android:id="@+id/btn_start_splash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:text="@string/text_splash_button"
+        android:textColor="@color/bg_btn_save"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

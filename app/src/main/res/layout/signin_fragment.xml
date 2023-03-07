@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ** Project Name : EA1H
+  ** @company YMSLI
+  ** @author  (VE00YM023)
+  ** @date   4/2/20 12:23 PM
+  ** Copyright (c) 2020, Yamaha Motor Solutions (INDIA) Pvt Ltd.
+  **
+  ** Description
+  ** __________________________________________________________________________________
+  ** This xml file represents the UI of SignInFragment.
+  ** __________________________________________________________________________________
+  **
+  ** Revision History
+  ** __________________________________________________________________________________
+  ** Modified By          Modified On         Description
+  ** __________________________________________________________________________________
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/tv_sign_in_email"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/edittext_shape"
+        android:ems="10"
+        android:hint="@string/hint_email"
+        android:drawableStart="@drawable/icon_mail"
+        android:drawablePadding="8dp"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/callBlueTextColorHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPasswordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_in_email"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:passwordToggleTint="@color/callBlueTextColorHint"
+        app:passwordToggleEnabled="true"
+        app:errorEnabled="true">
+
+        <EditText
+            android:id="@+id/tv_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_shape"
+            android:ems="10"
+            android:drawableStart="@drawable/icon_password"
+            android:drawablePadding="8dp"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/callBlueTextColorHint"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <EditText-->
+<!--        android:id="@+id/tv_password"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:background="@drawable/edittext_shape"-->
+<!--        android:ems="10"-->
+<!--        android:drawableStart="@drawable/icon_password"-->
+<!--        android:drawablePadding="8dp"-->
+<!--        android:hint="@string/hint_password"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textColorHint="@color/callBlueTextColorHint"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_sign_in_email" />-->
+
+    <Button
+        android:id="@+id/btn_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/sign_in"
+        android:textColor="@color/bg_btn_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordLayout" />
+
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:text="@string/label_forgot_your_password"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_in" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

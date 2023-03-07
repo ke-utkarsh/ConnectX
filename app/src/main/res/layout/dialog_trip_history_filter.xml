@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/label_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/label_filters"
+        android:textColor="@color/label_blue_trip_history_filter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:drawableTop="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/label_filter"
+        app:layout_constraintBottom_toBottomOf="@id/label_filter"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp"
+        android:paddingTop="16dp"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Container for the vehicle list filter section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_vehicle_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/label_vehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_vehicle"
+                    android:textColor="@color/label_gray_trip_history_filter"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_collapse_vehicle"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_expand_less"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/content_vehicles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_vehicle"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_vehicles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/separator_vehicles"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/separator_line"
+                app:layout_constraintStart_toStartOf="@id/container_vehicle_list"
+                app:layout_constraintTop_toBottomOf="@id/container_vehicle_list"
+                app:layout_constraintEnd_toEndOf="@id/container_vehicle_list"/>
+
+            <!-- Container for the date filter section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separator_vehicles"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/label_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_date"
+                    android:textColor="@color/label_gray_trip_history_filter"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_collapse_date"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_expand_less"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/content_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_date"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/label_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/label_from"
+                        android:textColor="@color/text_gray_trip_history_filter"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_from_date"
+                        app:layout_constraintBottom_toTopOf="@id/tv_from_date"/>
+
+                    <TextView
+                        android:id="@+id/tv_from_date"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@color/bg_trip_history_filter_item"
+                        android:text="@string/placeholder_date"
+                        android:textColor="@color/text_blue_trip_history_filter"
+                        android:gravity="center_vertical|center_horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/label_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/label_to"
+                        android:textColor="@color/text_gray_trip_history_filter"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_to_date"
+                        app:layout_constraintBottom_toTopOf="@id/tv_to_date"/>
+
+                    <TextView
+                        android:id="@+id/tv_to_date"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@color/bg_trip_history_filter_item"
+                        android:text="@string/placeholder_date"
+                        android:textColor="@color/text_blue_trip_history_filter"
+                        android:gravity="center_horizontal|center_vertical"
+                        app:layout_constraintStart_toEndOf="@id/tv_from_date"
+                        app:layout_constraintTop_toTopOf="@id/tv_from_date"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_from_date"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/separator_date"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/separator_line"
+                app:layout_constraintStart_toStartOf="@id/container_date"
+                app:layout_constraintTop_toBottomOf="@id/container_date"
+                app:layout_constraintEnd_toEndOf="@id/container_date"/>
+
+            <!-- Container for the distance filter section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separator_date"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/label_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_distance"
+                    android:textColor="@color/label_gray_trip_history_filter"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_collapse_distance"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_expand_less"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/content_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_distance"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/label_distance_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/label_from"
+                        android:textColor="@color/text_gray_trip_history_filter"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_from_distance"
+                        app:layout_constraintBottom_toTopOf="@id/tv_from_distance"/>
+
+                    <TextView
+                        android:id="@+id/tv_from_distance"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@color/bg_trip_history_filter_item"
+                        android:text="@string/placeholder_distance"
+                        android:textColor="@color/text_blue_trip_history_filter"
+                        android:gravity="center_vertical|center_horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/label_to_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/label_to"
+                        android:textColor="@color/text_gray_trip_history_filter"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_to_distance"
+                        app:layout_constraintBottom_toTopOf="@id/tv_to_distance"/>
+
+                    <TextView
+                        android:id="@+id/tv_to_distance"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@color/bg_trip_history_filter_item"
+                        android:text="@string/placeholder_distance"
+                        android:textColor="@color/text_blue_trip_history_filter"
+                        android:gravity="center_horizontal|center_vertical"
+                        app:layout_constraintStart_toEndOf="@id/tv_from_distance"
+                        app:layout_constraintTop_toTopOf="@id/tv_from_distance"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_from_distance"/>
+
+                    <com.appyvet.materialrangebar.RangeBar
+                        android:id="@+id/range_bar_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrb_barWeight="1dp"
+                        app:mrb_thumbColor="@color/thumb_range_bar_trip_history_distance_filter"
+                        app:mrb_rangeBarColor="@color/bar_color_range_bar_trip_history_filter"
+                        app:mrb_connectingLineColor="@color/bar_color_range_bar_trip_history_filter"
+                        app:mrb_connectingLineWeight="1dp"
+                        app:mrb_minThumbDistance="-1"
+                        app:mrb_pinColor="@color/pin_color_range_bar_trip_history_filter"
+                        app:mrb_pinMaxFont="12sp"
+                        app:mrb_pinMinFont="12sp"
+                        app:mrb_pinRadius="14dp"
+                        app:mrb_pinTextColor="@color/white"
+                        app:mrb_rangeBar="true"
+                        app:mrb_rangeBarPaddingBottom="30dp"
+                        app:mrb_thumbSize="10dp"
+                        app:mrb_temporaryPins="true"
+                        app:mrb_tickEnd="100"
+                        app:mrb_tickHeight="0.1dp"
+                        app:mrb_tickInterval="1"
+                        app:mrb_tickStart="0"
+                        app:mrb_tickDefaultColor="@color/bar_color_range_bar_trip_history_filter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_from_distance"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/placeholder_distance"
+                        android:textSize="10sp"
+                        android:textColor="@color/label_gray_trip_history_filter"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="56dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_from_distance"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/placeholder_distance_max"
+                        android:textSize="10sp"
+                        android:textColor="@color/label_gray_trip_history_filter"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="56dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_from_distance"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/separator_distance"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/separator_line"
+                app:layout_constraintStart_toStartOf="@id/container_distance"
+                app:layout_constraintTop_toBottomOf="@id/container_distance"
+                app:layout_constraintEnd_toEndOf="@id/container_distance"/>
+
+            <!-- Container for the brake count filter section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_brake_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separator_distance"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/label_brake_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_brake_counts"
+                    android:textColor="@color/label_gray_trip_history_filter"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_collapse_brake_count"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_expand_less"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/content_brake_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_brake_count"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/label_brake_count_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/label_from"
+                        android:textColor="@color/text_gray_trip_history_filter"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_from_brake_count"
+                        app:layout_constraintBottom_toTopOf="@id/tv_from_brake_count"/>
+
+                    <TextView
+                        android:id="@+id/tv_from_brake_count"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@color/bg_trip_history_filter_item"
+                        android:text="@string/placeholder_brake_count"
+                        android:textColor="@color/text_blue_trip_history_filter"
+                        android:gravity="center_vertical|center_horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/label_brake_count_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/label_to"
+                        android:textColor="@color/text_gray_trip_history_filter"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_to_brake_count"
+                        app:layout_constraintBottom_toTopOf="@id/tv_to_brake_count"/>
+
+                    <TextView
+                        android:id="@+id/tv_to_brake_count"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@color/bg_trip_history_filter_item"
+                        android:text="@string/placeholder_brake_count"
+                        android:textColor="@color/text_blue_trip_history_filter"
+                        android:gravity="center_horizontal|center_vertical"
+                        app:layout_constraintStart_toEndOf="@id/tv_from_brake_count"
+                        app:layout_constraintTop_toTopOf="@id/tv_from_brake_count"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_from_brake_count"/>
+
+                    <com.appyvet.materialrangebar.RangeBar
+                        android:id="@+id/range_bar_brake_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrb_barWeight="1dp"
+                        app:mrb_thumbColor="@color/thumb_range_bar_trip_history_distance_filter"
+                        app:mrb_rangeBarColor="@color/bar_color_range_bar_trip_history_filter"
+                        app:mrb_connectingLineColor="@color/bar_color_range_bar_trip_history_filter"
+                        app:mrb_connectingLineWeight="1dp"
+                        app:mrb_minThumbDistance="-1"
+                        app:mrb_pinColor="@color/pin_color_range_bar_trip_history_filter"
+                        app:mrb_pinMaxFont="12sp"
+                        app:mrb_pinMinFont="12sp"
+                        app:mrb_pinRadius="14dp"
+                        app:mrb_pinTextColor="@color/white"
+                        app:mrb_rangeBar="true"
+                        app:mrb_rangeBarPaddingBottom="30dp"
+                        app:mrb_thumbSize="10dp"
+                        app:mrb_temporaryPins="true"
+                        app:mrb_tickEnd="100"
+                        app:mrb_tickHeight="0.1dp"
+                        app:mrb_tickInterval="1"
+                        app:mrb_tickStart="0"
+                        app:mrb_tickDefaultColor="@color/bar_color_range_bar_trip_history_filter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_from_brake_count"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/placeholder_brake_count"
+                        android:textSize="10sp"
+                        android:textColor="@color/label_gray_trip_history_filter"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="56dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_from_brake_count"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/max_break_count"
+                        android:textSize="10sp"
+                        android:textColor="@color/label_gray_trip_history_filter"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="56dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_from_brake_count"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/separator_brake_count"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/separator_line"
+                app:layout_constraintStart_toStartOf="@id/container_brake_count"
+                app:layout_constraintTop_toBottomOf="@id/container_brake_count"
+                app:layout_constraintEnd_toEndOf="@id/container_brake_count"/>
+
+            <!-- Container for the brake count filter section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_avg_speed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separator_brake_count"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/label_avg_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Average speed"
+                    android:textColor="@color/label_gray_trip_history_filter"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_collapse_avg_speed"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_expand_less"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/content_avg_speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_avg_speed"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/label_avg_speed_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/label_from"
+                        android:textColor="@color/text_gray_trip_history_filter"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_from_avg_speed"
+                        app:layout_constraintBottom_toTopOf="@id/tv_from_avg_speed"/>
+
+                    <TextView
+                        android:id="@+id/tv_from_avg_speed"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@color/bg_trip_history_filter_item"
+                        android:text="@string/placeholder_speed"
+                        android:textColor="@color/text_blue_trip_history_filter"
+                        android:gravity="center_vertical|center_horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/label_avg_speed_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/label_to"
+                        android:textColor="@color/text_gray_trip_history_filter"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_to_avg_speed"
+                        app:layout_constraintBottom_toTopOf="@id/tv_to_avg_speed"/>
+
+                    <TextView
+                        android:id="@+id/tv_to_avg_speed"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@color/bg_trip_history_filter_item"
+                        android:text="@string/placeholder_speed"
+                        android:textColor="@color/text_blue_trip_history_filter"
+                        android:gravity="center_horizontal|center_vertical"
+                        app:layout_constraintStart_toEndOf="@id/tv_from_avg_speed"
+                        app:layout_constraintTop_toTopOf="@id/tv_from_avg_speed"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_from_avg_speed"/>
+
+                    <com.appyvet.materialrangebar.RangeBar
+                        android:id="@+id/range_bar_avg_speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrb_barWeight="1dp"
+                        app:mrb_thumbColor="@color/thumb_range_bar_trip_history_distance_filter"
+                        app:mrb_rangeBarColor="@color/bar_color_range_bar_trip_history_filter"
+                        app:mrb_connectingLineColor="@color/bar_color_range_bar_trip_history_filter"
+                        app:mrb_connectingLineWeight="1dp"
+                        app:mrb_minThumbDistance="-1"
+                        app:mrb_pinColor="@color/pin_color_range_bar_trip_history_filter"
+                        app:mrb_pinMaxFont="12sp"
+                        app:mrb_pinMinFont="12sp"
+                        app:mrb_pinRadius="14dp"
+                        app:mrb_pinTextColor="@color/white"
+                        app:mrb_rangeBar="true"
+                        app:mrb_rangeBarPaddingBottom="30dp"
+                        app:mrb_thumbSize="10dp"
+                        app:mrb_temporaryPins="true"
+                        app:mrb_tickEnd="100"
+                        app:mrb_tickHeight="0.1dp"
+                        app:mrb_tickInterval="1"
+                        app:mrb_tickStart="0"
+                        app:mrb_tickDefaultColor="@color/bar_color_range_bar_trip_history_filter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_from_avg_speed"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/placeholder_speed"
+                        android:textSize="10sp"
+                        android:textColor="@color/label_gray_trip_history_filter"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="56dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_from_avg_speed"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/placeholder_speed_max"
+                        android:textSize="10sp"
+                        android:textColor="@color/label_gray_trip_history_filter"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="56dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_from_avg_speed"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/separator_avg_speed"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/separator_line"
+                app:layout_constraintStart_toStartOf="@id/container_avg_speed"
+                app:layout_constraintTop_toBottomOf="@id/container_avg_speed"
+                app:layout_constraintEnd_toEndOf="@id/container_avg_speed"/>
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="48dp"
+                android:backgroundTint="@color/bg_btn_cancel"
+                android:text="@string/btnClear"
+                android:textColor="@color/text_btn_cancel"
+                app:layout_constraintEnd_toStartOf="@+id/btn_apply"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separator_avg_speed" />
+
+
+            <Button
+                android:id="@+id/btn_apply"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/bg_btn_save"
+                android:text="@string/btnApply"
+                android:textColor="@color/text_btn_save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_clear"
+                app:layout_constraintTop_toTopOf="@id/btn_clear"
+                app:layout_constraintBottom_toBottomOf="@id/btn_clear"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/bg_bottom_component"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
